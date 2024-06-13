@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Fond en gris très foncé */
+    color: #1a5276; /* Couleur des caractères en bleu foncé */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px; /* Augmenter le padding pour élargir la barre de navigation */
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Centrer les éléments verticalement */
+    margin: 0;
+    padding: 0;
+    width: 80%; /* Définir la largeur de la barre de navigation */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 60px 20px;
+    min-height: calc(100vh - 100px); /* La section occupe toute la hauteur de la fenêtre - hauteur de la barre de navigation */
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+footer img {
+    width: 30px; /* Ajustez la taille des images selon vos besoins */
+    height: 30px; /* Ajustez la taille des images selon vos besoins */
+    margin: 0 10px;
+}
+
+/* Style pour la section à propos */
+#about {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+    justify-content: flex-start; /* Aligner à gauche mais pas complètement */
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+    padding-left: 100px; /* Ajuster la marge de gauche */
+    padding-right: 20px; /* Ajouter du padding pour le conteneur */
+}
+
+#about img {
+    width: 350px; /* Augmenter la taille de l'image */
+    height: 350px; /* Augmenter la taille de l'image */
+    border-radius: 50%; /* Transforme l'image en cercle */
+    border: 5px solid orange; /* Contour orange */
+    object-fit: cover; /* Empêche la distorsion */
+    margin-right: 40px; /* Ajoute un espace à droite de l'image */
+}
+
+#about div {
+    flex: 1;
+}
