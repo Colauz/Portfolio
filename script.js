@@ -1,20 +1,36 @@
-// Sélectionnez tous les liens dans la barre de navigation
+
 const navLinks = document.querySelectorAll('nav ul li a');
 
-// Pour chaque lien, ajoutez un gestionnaire d'événements de clic
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // Empêche le comportement par défaut du lien
+        e.preventDefault(); 
 
-        // Récupérez l'identifiant de la section cible à partir de l'attribut href du lien
+
         const targetId = link.getAttribute('href').substring(1);
 
-        // Sélectionnez la section cible
+
         const targetSection = document.getElementById(targetId);
 
-        // Faites défiler doucement vers la section cible
+    
         targetSection.scrollIntoView({
-            behavior: 'smooth' // Faites défiler en douceur
+            behavior: 'smooth' 
         });
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function changeLinkState() {
+        let index = sections.length;
+
+        while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove('active'));
+        navLinks[index].classList.add('active');
+    }
+
+    changeLinkState();
+    window.addEventListener('scroll', changeLinkState);
 });

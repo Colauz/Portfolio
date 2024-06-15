@@ -1,86 +1,226 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222; /* Fond en gris très foncé */
-    color: #1a5276; /* Couleur des caractères en bleu foncé */
+    background-color: #000;
+    color: #fff;
 }
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond transparent avec une légère couleur */
+    backdrop-filter: blur(10px); /* Appliquer un flou */
     color: white;
-    padding: 20px; /* Augmenter le padding pour élargir la barre de navigation */
     z-index: 1000;
+    padding-top: 20px; /* Ajouter du padding en haut pour créer de l'espace */
 }
 
-nav ul {
-    list-style: none;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.brand {
+    font-size: 1.5em;
+}
+
+.nav-links {
     display: flex;
     justify-content: flex-end;
-    align-items: center; /* Centrer les éléments verticalement */
+    align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
-    width: 80%; /* Définir la largeur de la barre de navigation */
+    flex-wrap: wrap;
 }
 
-nav ul li {
+.nav-links li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.nav-links li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #00aaff;
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.75), 0 0 10px rgba(0, 170, 255, 0.75);
 }
 
 section {
-    padding: 60px 20px;
-    min-height: calc(100vh - 100px); /* La section occupe toute la hauteur de la fenêtre - hauteur de la barre de navigation */
+    height: 100vh; /* Hauteur de la section égale à la hauteur de la fenêtre */
+    padding: 80px 20px; /* Ajuster pour compenser la barre de navigation */
+    box-sizing: border-box;
     display: flex;
-    align-items: center; /* Centrer verticalement */
+    align-items: center;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    position: relative;
 }
 
-section h2 {
-    margin-top: 0;
+#about {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    width: 100%;
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+    justify-content: space-between; /* Espacer le texte et l'image */
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+.about-text h2 {
+    font-size: 3em;
+}
+
+.about-text p {
+    margin: 20px 0;
+}
+
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Augmenter la taille du cercle */
+    height: 60px; /* Augmenter la taille du cercle */
+    border: 2px solid #00aaff;
+    border-radius: 50%;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-circle img {
+    width: 30px; /* Augmenter la taille de l'icône */
+    height: 30px; /* Augmenter la taille de l'icône */
+    filter: brightness(0) invert(1); /* Convertir l'image en blanc */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.icon-circle:hover {
+    background: #00aaff;
+    border-color: #00aaff;
+    transform: scale(1.1); /* Grossir le cercle au survol */
+}
+
+.icon-circle:hover img {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(190deg) saturate(10); /* Convertir l'image en bleu */
+    transform: scale(1.1); /* Grossir l'icône au survol */
+}
+
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.hire-button, .contact-button {
+    padding: 15px 30px; /* Augmenter la taille des boutons */
+    font-size: 1.2em; /* Augmenter la taille de la police */
+    border: 2px solid #00aaff;
+    border-radius: 10px; /* Arrondir les bords des boutons */
+    background: none;
+    color: #00aaff;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.hire-button:hover, .contact-button:hover {
+    background: #00aaff;
+    color: #000;
+    transform: scale(1.1); /* Grossir le bouton au survol */
+}
+
+.about-img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 50px; /* Ajouter de l'espace entre l'image et le texte */
+}
+
+.about-img:hover {
+    box-shadow: 0 0 20px 5px rgba(0, 174, 255, 0.75);
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #111;
+    color: #fff;
 }
 
 footer img {
-    width: 30px; /* Ajustez la taille des images selon vos besoins */
-    height: 30px; /* Ajustez la taille des images selon vos besoins */
+    width: 30px;
+    height: 30px;
     margin: 0 10px;
 }
 
-/* Style pour la section à propos */
-#about {
-    display: flex;
-    align-items: center; /* Centrer verticalement */
-    justify-content: flex-start; /* Aligner à gauche mais pas complètement */
-    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
-    padding-left: 100px; /* Ajuster la marge de gauche */
-    padding-right: 20px; /* Ajouter du padding pour le conteneur */
+.neon-blue {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #00aaff;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.75), 0 0 20px rgba(0, 170, 255, 0.75), 0 0 30px rgba(0, 170, 255, 0.75);
 }
 
-#about img {
-    width: 350px; /* Augmenter la taille de l'image */
-    height: 350px; /* Augmenter la taille de l'image */
-    border-radius: 50%; /* Transforme l'image en cercle */
-    border: 5px solid orange; /* Contour orange */
-    object-fit: cover; /* Empêche la distorsion */
-    margin-right: 40px; /* Ajoute un espace à droite de l'image */
+.white-text {
+    color: white;
 }
 
-#about div {
-    flex: 1;
+p, li, a {
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        text-align: center; /* Centrer le texte sur petits écrans */
+    }
+
+    .about-img {
+        width: 350px;
+        height: 350px;
+        margin-top: 20px;
+    }
 }
