@@ -562,3 +562,52 @@ p, li, a {
 .btn-submit:active {
     background-color: #004bb5;
 }
+
+#enedis {
+    padding: 40px 20px; /* Ajoutez un remplissage pour donner de l'espace autour du contenu */
+    text-align: center;
+    display: flex; /* Utilisez Flexbox pour aligner les éléments */
+    flex-direction: column; /* Alignez les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    height: 100vh; /* Utilisez toute la hauteur de la vue */
+    justify-content: center; /* Centre les éléments verticalement */
+}
+
+.coucou-title {
+    margin-bottom: 20px;
+    font-size: 4rem; /* Ajustez la taille de la police selon vos besoins */
+}
+
+.content-container {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; /* Aligne les images à gauche */
+}
+
+.enedis-image {
+    max-width: 300px; /* Ajustez la taille des images pour correspondre à la taille souhaitée */
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    max-width: 500px;
+    text-align: justify; /* Justifie le texte */
+    margin-left: 20px; /* Ajoute une marge à gauche pour séparer le texte des images */
+}
+
+.text-container p {
+    line-height: 1.5; /* Ajustez cette valeur pour modifier l'espacement entre les lignes de texte */
+}
+
+

@@ -1,6 +1,6 @@
 function setupNavLinks() {
-    const navLinks = document.querySelectorAll('nav ul li a, .footer-links a'); 
-    const offset = 80; 
+    const navLinks = document.querySelectorAll('nav ul li a, .footer-links a, .buttons a');
+    const offset = 80;
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -19,12 +19,22 @@ function setupNavLinks() {
 
 function setupScrollSpy() {
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a, .footer-links a');
-    const offset = 80; 
+    const navLinks = document.querySelectorAll('.nav-links a, .footer-links a, .buttons a');
+    const offset = 80;
 
     function changeLinkState() {
         let index = sections.length;
+
         while (--index && window.scrollY + offset < sections[index].offsetTop) {}
+
+        // Log to check the current index and section
+        console.log('Current index:', index);
+        if (sections[index]) {
+            console.log('Current section:', sections[index].id);
+        } else {
+            console.log('Section not found for index:', index);
+        }
+
         navLinks.forEach((link) => link.classList.remove('active'));
         if (navLinks[index]) {
             navLinks[index].classList.add('active');
@@ -39,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupNavLinks();
     setupScrollSpy();
 });
-
 
 function loadTemplate(url, placeholderId, callback) {
     fetch(url)
@@ -56,12 +65,20 @@ function initializePage() {
         setupNavLinks(); 
         setupScrollSpy(); 
     });
-    loadTemplate('about.html', 'about-placeholder', initializeTypingAnimation);
+    loadTemplate('about.html', 'about-placeholder', () => {
+        initializeTypingAnimation();
+        setupNavLinks(); 
+        setupScrollSpy(); 
+    });
+    
     loadTemplate('skills.html', 'skills-placeholder');
     loadTemplate('education.html', 'education-placeholder');
     loadTemplate('enedis.html', 'enedis-placeholder');
     loadTemplate('contact.html', 'contact-placeholder');
-    loadTemplate('footer.html', 'footer-placeholder');
+    loadTemplate('footer.html', 'footer-placeholder', () => {
+        setupNavLinks(); 
+        setupScrollSpy(); 
+    });
 }
 
 function initializeTypingAnimation() {
