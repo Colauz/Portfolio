@@ -10,11 +10,11 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond transparent avec une légère couleur */
-    backdrop-filter: blur(10px); /* Appliquer un flou */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
     color: white;
     z-index: 1000;
-    padding-top: 20px; /* Ajouter du padding en haut pour créer de l'espace */
+    padding-top: 20px;
 }
 
 .nav-container {
@@ -55,26 +55,26 @@ header {
 }
 
 section {
-    height: 100vh; /* Hauteur de la section égale à la hauteur de la fenêtre */
-    padding: 80px 20px; /* Ajuster pour compenser la barre de navigation */
+    padding: 80px 20px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrer le contenu horizontalement */
+    justify-content: center;
     position: relative;
+    min-height: 100vh; /* Pour assurer que la section occupe au moins la hauteur de la fenêtre */
 }
 
 #about {
     display: flex;
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
 .about-content {
     display: flex;
-    align-items: center; /* Centrer verticalement */
-    justify-content: space-between; /* Espacer le texte et l'image */
+    align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     width: 100%;
     padding: 0 20px;
@@ -85,7 +85,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left; /* Aligner le texte à gauche */
+    text-align: left;
 }
 
 .about-text h2 {
@@ -102,33 +102,40 @@ section {
     gap: 15px;
 }
 
+.social-icons-footer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 .icon-circle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px; /* Augmenter la taille du cercle */
-    height: 60px; /* Augmenter la taille du cercle */
+    width: 60px;
+    height: 60px;
     border: 2px solid #00aaff;
     border-radius: 50%;
     transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .icon-circle img {
-    width: 30px; /* Augmenter la taille de l'icône */
-    height: 30px; /* Augmenter la taille de l'icône */
-    filter: brightness(0) invert(1); /* Convertir l'image en blanc */
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .icon-circle:hover {
     background: #00aaff;
     border-color: #00aaff;
-    transform: scale(1.1); /* Grossir le cercle au survol */
+    transform: scale(1.1);
 }
 
 .icon-circle:hover img {
-    filter: brightness(0) invert(1) sepia(1) hue-rotate(190deg) saturate(10); /* Convertir l'image en bleu */
-    transform: scale(1.1); /* Grossir l'icône au survol */
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(190deg) saturate(10);
+    transform: scale(1.1);
 }
 
 .buttons {
@@ -137,11 +144,11 @@ section {
     gap: 15px;
 }
 
-.hire-button, .contact-button {
-    padding: 15px 30px; /* Augmenter la taille des boutons */
-    font-size: 1.2em; /* Augmenter la taille de la police */
+.contact-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
     border: 2px solid #00aaff;
-    border-radius: 10px; /* Arrondir les bords des boutons */
+    border-radius: 10px;
     background: none;
     color: #00aaff;
     cursor: pointer;
@@ -151,7 +158,7 @@ section {
 .hire-button:hover, .contact-button:hover {
     background: #00aaff;
     color: #000;
-    transform: scale(1.1); /* Grossir le bouton au survol */
+    transform: scale(1.1);
 }
 
 .about-img {
@@ -160,7 +167,7 @@ section {
     border-radius: 50%;
     object-fit: cover;
     transition: box-shadow 0.3s ease-in-out;
-    margin-left: 50px; /* Ajouter de l'espace entre l'image et le texte */
+    margin-left: 50px;
 }
 
 .about-img:hover {
@@ -180,11 +187,36 @@ footer img {
     margin: 0 10px;
 }
 
+.footer-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00aaff;
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.75), 0 0 10px rgba(0, 170, 255, 0.75);
+}
+
 .neon-blue {
     font-family: 'Montserrat', Arial, sans-serif;
     color: #00aaff;
     text-shadow: 0 0 10px rgba(0, 170, 255, 0.75), 0 0 20px rgba(0, 170, 255, 0.75), 0 0 30px rgba(0, 170, 255, 0.75);
 }
+
+.neon-green {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #00ff00; /* Couleur vert clair */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.75), 0 0 20px rgba(0, 255, 0, 0.75), 0 0 30px rgba(0, 255, 0, 0.75);
+}
+
 
 .white-text {
     color: white;
@@ -215,7 +247,7 @@ p, li, a {
 
     .about-text {
         max-width: 100%;
-        text-align: center; /* Centrer le texte sur petits écrans */
+        text-align: center;
     }
 
     .about-img {
@@ -223,4 +255,310 @@ p, li, a {
         height: 350px;
         margin-top: 20px;
     }
+}
+
+.about-text h2 {
+    font-size: 3em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.typed-out {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.static-text {
+    color: #fff;
+}
+
+.dynamic-text {
+    color: #00aaff;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.75), 0 0 20px rgba(0, 170, 255, 0.75), 0 0 30px rgba(0, 170, 255, 0.75);
+}
+
+.cursor {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #00aaff;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.75), 0 0 20px rgba(0, 170, 255, 0.75), 0 0 30px rgba(0, 170, 255, 0.75);
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+#skills {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; /* Ajouter du padding pour plus d'espace autour */
+}
+
+.skills-title {
+    font-size: 3em; /* Augmenter la taille de la police */
+    margin-bottom: 40px; /* Ajouter plus d'espace sous le titre */
+    margin-top: 0;
+}
+
+.skills-wrapper {
+    background-color: rgba(0, 170, 255, 0.2);
+    border: 2px solid #00aaff;
+    padding: 40px; /* Augmenter le padding pour plus d'espace */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    max-width: 90%; /* Augmenter la largeur maximale */
+    margin: 0 auto;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Augmenter l'espace entre les compétences */
+    flex-wrap: wrap; /* Permettre le wrap pour éviter les débordements */
+}
+
+.skill {
+    background-color: #111;
+    width: 200px; /* Augmenter la largeur du conteneur de compétence */
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img {
+    width: 60px; 
+    height: 60px;
+    margin-bottom: 20px; 
+}
+
+.nested-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+}
+
+.nested-skills img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill p {
+    margin: 10px 0 0 0; 
+    font-size: 1.2em; 
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.skill:hover p {
+    color: #00aaff;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 5px rgba(0, 170, 255, 0.75);
+}
+
+.education-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.education-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #00aaff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #00aaff;
+    border: 4px solid #fff;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    background-image: url('img/education.svg');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.timeline-item.right::after {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: rgba(0, 170, 255, 0.2);
+    border: 2px solid #00aaff;
+    position: relative;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 10px;
+        margin-left: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .timeline-item::after {
+        left: -30px;
+        top: 20px;
+        transform: translate(0, -50%);
+    }
+
+    .timeline-item.left, .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-content {
+        text-align: left;
+        margin-left: 50px;
+    }
+}
+
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section .highlight {
+    color: #00f;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; 
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px; 
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif; 
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #ccc;
+    font-family: 'Arial', sans-serif; 
+}
+
+.btn-submit {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Augmenter la taille du bouton */
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #005ce6;
+}
+
+.btn-submit:active {
+    background-color: #004bb5;
 }
