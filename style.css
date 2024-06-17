@@ -152,6 +152,7 @@ section {
     background: none;
     color: #00aaff;
     cursor: pointer;
+    text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
@@ -192,6 +193,7 @@ footer img {
     display: flex;
     justify-content: center;
     gap: 15px;
+    bottom: 0;
 }
 
 .footer-links a {
@@ -398,6 +400,7 @@ p, li, a {
 }
 
 .education-title {
+    text-align: center;
     font-size: 3em;
     margin-bottom: 40px;
     margin-top: 0;
@@ -589,11 +592,11 @@ p, li, a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: flex-start; /* Aligne les images à gauche */
+    align-items: flex-start; 
 }
 
 .enedis-image {
-    max-width: 300px; /* Ajustez la taille des images pour correspondre à la taille souhaitée */
+    max-width: 300px; 
     height: auto;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -602,12 +605,25 @@ p, li, a {
 
 .text-container {
     max-width: 500px;
-    text-align: justify; /* Justifie le texte */
-    margin-left: 20px; /* Ajoute une marge à gauche pour séparer le texte des images */
+    text-align: justify; 
+    margin-left: 20px; 
 }
 
 .text-container p {
-    line-height: 1.5; /* Ajustez cette valeur pour modifier l'espacement entre les lignes de texte */
+    line-height: 1.5; 
 }
 
 
+.main-content {
+    flex: 1;
+}
+
+.power-title {
+    margin-bottom: 20px;
+    font-size: 4rem; 
+}
+
+.titre-title {
+    font-size: 3em;
+    margin: 0;
+}

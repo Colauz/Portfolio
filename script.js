@@ -1,21 +1,26 @@
 function setupNavLinks() {
-    const navLinks = document.querySelectorAll('nav ul li a, .footer-links a, .buttons a');
+    const navLinks = document.querySelectorAll('nav ul li a, .nav-links a, .footer-links a, .buttons a');
     const offset = 80;
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - offset,
-                    behavior: 'smooth'
-                });
+            const targetHref = link.getAttribute('href');
+            if (targetHref && targetHref.startsWith('#')) {
+                e.preventDefault();
+                const targetId = targetHref.substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - offset,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
 }
+
+document.addEventListener('DOMContentLoaded', setupNavLinks);
 
 function setupScrollSpy() {
     const sections = document.querySelectorAll('section');
@@ -27,7 +32,6 @@ function setupScrollSpy() {
 
         while (--index && window.scrollY + offset < sections[index].offsetTop) {}
 
-        // Log to check the current index and section
         console.log('Current index:', index);
         if (sections[index]) {
             console.log('Current section:', sections[index].id);
@@ -81,6 +85,8 @@ function initializePage() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', initializePage);
+
 function initializeTypingAnimation() {
     const texts = ["Développeur Python", "Alternant chez Enedis", "Étudiant en BUT SD", "Web Développeur"];
     let count = 0;
@@ -108,5 +114,3 @@ function initializeTypingAnimation() {
         }
     }());
 }
-
-document.addEventListener('DOMContentLoaded', initializePage);

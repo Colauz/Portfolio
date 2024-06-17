@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            font-size: 20px;
+            background-color: #000;
+        }
+        .content {
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 1200px; 
+            line-height: 1.8; 
+            flex: 1;
+        }
+        .content p {
+            margin-bottom: 0;
+        }
+        .power-title {
+            text-align: center;
+            font-size: 3em; 
+        }
+        .image-text-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .image-container {
+            flex: 1; 
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 400px; 
+            width: auto;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .text-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+        }
+        .text-container p {
+            margin: 0;
+        }
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            width: 100%; /* Ensure footer takes full width */
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-icons-footer {
+            display: flex;
+            gap: 10px;
+        }
+        .icon-circle {
+            background-color: #333;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .common-text {
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="buttons">
+        <button class="contact-button" onclick="window.location.href='index.html'">Revenir en arrière</button>
+    </div>
+
+    <h2 class="power-title"><span class="neon-blue">Power Bi</span> <span class="white-text">et</span> <span class="neon-blue">Visualisation de données</span></h2>
+
+    <div class="content">
+        <p class="common-text">Bienvenue sur la page dédiée à mes compétences en PowerBi et Visualisation de Données, intégrées dans mon travail. Ces compétences sont essentielles en science des données et au parcours VCOD du BUT STID.</p>
+        
+        <p class="common-text">Durant mon parcours, j'ai maîtrisé divers langages de programmation et outils de gestion et visualisation de données.</p>
+        
+        <p class="common-text">Dans les sections suivantes, je présenterai plusieurs projets démontrant ma capacité à visualiser des données et plus encore. Vous y trouverez des exemples de code, des captures d'écran, et d'autres preuves tangibles de mon travail.</p>
+        
+        <p class="common-text">Ces projets illustrent ma maîtrise technique et ma capacité à appliquer ces compétences pour résoudre des problèmes réels et fournir des insights précieux. J'espère que ces exemples seront illustratifs de mes compétences.</p>
+    
+        <h3 class="power-title"><span class="white-text">Exemples à travers des projets</span></h3>
+        <h4 class="power-title"><span class="neon-blue">Ligue 1 <span class="white-text">&</span> Power Bi</span></h4>
+
+        <div class="image-text-container">
+            <div class="image-container">
+                <img src="img/powerbi_ligue_1_p1.png" alt="Image 1">
+                <img src="img/powerbi_ligue_1_p2.png" alt="Image 2">
+            </div>
+            <div class="text-container">
+                <p>Durant ma deuxième année de BUT en Science des données, j'ai eu l'opportunité de réaliser un projet consistant à collecter, traiter, et visualiser des données grâce à du code Python. J'ai décidé d'extraire les données du site de la Ligue 1, étant moi-même amateur de football, puis de créer une visualisation. Ce projet était intéressant car nous devions non seulement réaliser la visualisation, mais aussi nous occuper de la récolte et du traitement des données, deux phases extrêmement importantes dans le travail d'un Data Analyst, un métier que je pourrais exercer.</p>
+            </div>
+        </div>
+
+        <h4 class="power-title"><span class="neon-blue">Film <span class="white-text">&</span> Power Bi / Talend</span></h4>
+
+        <div class="image-text-container">
+            <div class="image-container">
+                <img src="img/talend.png" alt="Image 3">
+                <img src="img/film_powerbi.png" alt="Image 4">
+            </div>
+            <div class="text-container">
+                <p>Le deuxième projet intéressant que j'ai pu réaliser concerne le traitement et la visualisation de données. C'est aussi un projet que j'ai réalisé en deuxième année de BUT. Ce projet avait pour but de traiter des données de films concernant des réalisateurs, des acteurs, le box-office, etc. Les données ont été traitées avec Talend, un outil de traitement de données, puis visualisées avec Power BI, comme vous pouvez le voir à gauche.</p>
+            </div>            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>Retrouvez-moi sur:</p>
+            <div class="social-icons-footer">
+                <a href="https://github.com/Colauz">
+                    <div class="icon-circle">
+                        <img src="img/github.svg" alt="GitHub">
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/laurian-jamin/">
+                    <div class="icon-circle">
+                        <img src="img/linkedin.svg" alt="LinkedIn">
+                    </div>
+                </a>
+                <a href="https://mastodon.social/@Niaphe_ow">
+                    <div class="icon-circle">
+                        <img src="img/mastodon.svg" alt="Mastodon">
+                    </div>
+                </a>
+            </div>        
+            <div class="footer-links">
+                <a href="index.html" id="link-about">À propos de moi</a>
+                <a href="index.html" id="link-contact">Contact</a>
+            </div>
+            <p>© Laurian Jamin | Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
