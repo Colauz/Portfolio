@@ -61,7 +61,7 @@ section {
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 100vh; /* Pour assurer que la section occupe au moins la hauteur de la fenêtre */
+    min-height: 100vh;
 }
 
 #about {
@@ -315,37 +315,37 @@ p, li, a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px; /* Ajouter du padding pour plus d'espace autour */
+    padding: 40px 20px; 
 }
 
 .skills-title {
-    font-size: 3em; /* Augmenter la taille de la police */
-    margin-bottom: 40px; /* Ajouter plus d'espace sous le titre */
+    font-size: 3em; 
+    margin-bottom: 40px;
     margin-top: 0;
 }
 
 .skills-wrapper {
     background-color: rgba(0, 170, 255, 0.2);
     border: 2px solid #00aaff;
-    padding: 40px; /* Augmenter le padding pour plus d'espace */
+    padding: 40px; 
     border-radius: 10px;
     display: flex;
     justify-content: center;
     width: auto;
-    max-width: 90%; /* Augmenter la largeur maximale */
+    max-width: 90%;
     margin: 0 auto;
 }
 
 .skills-container {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Augmenter l'espace entre les compétences */
-    flex-wrap: wrap; /* Permettre le wrap pour éviter les débordements */
+    gap: 40px;
+    flex-wrap: wrap; 
 }
 
 .skill {
     background-color: #111;
-    width: 200px; /* Augmenter la largeur du conteneur de compétence */
+    width: 200px; 
     height: 200px; 
     display: flex;
     flex-direction: column;
@@ -551,7 +551,7 @@ p, li, a {
     background-color: #00f;
     color: #fff;
     border: none;
-    padding: 15px 30px; /* Augmenter la taille du bouton */
+    padding: 15px 30px;
     font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer;
@@ -567,24 +567,24 @@ p, li, a {
 }
 
 #enedis {
-    padding: 40px 20px; /* Ajoutez un remplissage pour donner de l'espace autour du contenu */
+    padding: 40px 20px; 
     text-align: center;
-    display: flex; /* Utilisez Flexbox pour aligner les éléments */
-    flex-direction: column; /* Alignez les éléments verticalement */
-    align-items: center; /* Centre les éléments horizontalement */
-    height: 100vh; /* Utilisez toute la hauteur de la vue */
-    justify-content: center; /* Centre les éléments verticalement */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh; 
+    justify-content: center; /
 }
 
 .coucou-title {
     margin-bottom: 20px;
-    font-size: 4rem; /* Ajustez la taille de la police selon vos besoins */
+    font-size: 4rem; 
 }
 
 .content-container {
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; 
+    align-items: center; 
     gap: 20px;
 }
 
