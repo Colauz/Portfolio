@@ -13,21 +13,24 @@
             min-height: 100vh;
             margin: 0;
             color: white;
-            font-size: 18px;
+            font-size: 20px;
+            background-color: #000;
         }
         .content {
             text-align: justify;
+            text-justify: inter-word; 
+            hyphens: auto; 
             margin: 0 auto;
-            max-width: 1000px; /* Increase max-width for larger content area */
-            line-height: 1.6; /* Adjust line-height for better readability */
+            max-width: 1200px;
+            line-height: 1.8;
             flex: 1;
         }
         .content p {
-            margin-bottom: 0;
+            margin-bottom: 1em;
         }
         .power-title {
             text-align: center;
-            font-size: 2.5em; /* Increase font size for the title */
+            font-size: 3em;
         }
         .image-text-container {
             display: flex;
@@ -36,28 +39,65 @@
         }
         .image-container {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .image-container img {
             max-width: 100%;
-            height: auto;
+            width: auto;
             display: block;
             margin-bottom: 10px;
-            width: 100%; /* Make images take full width of container */
         }
         .text-container {
             flex: 1;
             display: flex;
             align-items: center;
-            font-size: 1.2em; /* Increase font size for the text */
+            font-size: 1.5em;
         }
         .text-container p {
             margin: 0;
+        }
+        .application-image {
+            max-width: 80%; 
         }
         footer {
             background-color: #111;
             padding: 20px;
             text-align: center;
+            width: 100%;
         }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-icons-footer {
+            display: flex;
+            gap: 10px;
+        }
+        .icon-circle {
+            background-color: #333;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .common-text {
+            font-size: 1.5em;
+        }
+
+        .pdf-container embed {
+            max-width: 100%;
+            width: 600px; 
+            height: 800px; 
+            display: block;
+            margin-bottom: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -66,25 +106,36 @@
         <button class="contact-button" onclick="window.location.href='index.html'">Revenir en arrière</button>
     </div>
 
-    <h2 class="power-title"><span class="neon-blue">Power Bi</span> <span class="white-text">et</span> <span class="neon-blue">Visualisation de données</span></h2>
+    <h2 class="power-title"><span class="neon-blue">Développement </span> <span class="neon-blue">Web</span></h2>
 
     <div class="content">
-        <p>Bienvenue sur la page dédiée à mes compétences en PowerBi et Visualisation de Données, intégrées dans mon travail. Ces compétences sont essentielles en science des données et au parcours VCOD du BUT STID.</p>
+        <p class="common-text">Je vais aborder l'aspect statistique de mon parcours universitaire et illustrer mes compétences dans l'application de modèles statistiques à travers des projets que j'ai réalisés au cours de mes trois dernières années.</p>
+
+        <p class="common-text">Je vais vous montrer deux projets auxquels j'accorde une importance particulière car je trouve qu'ils m'ont vraiment passionné et permis de développer des compétences en programmation statistique et application de méthodes statistiques.</p>
         
-        <p>Durant mon parcours, j'ai maîtrisé divers langages de programmation et outils de gestion et visualisation de données.</p>
-        
-        <p>Dans les sections suivantes, je présenterai plusieurs projets démontrant ma capacité à visualiser des données et plus encore. Vous y trouverez des exemples de code, des captures d'écran, et d'autres preuves tangibles de mon travail.</p>
-        
-        <p>Ces projets illustrent ma maîtrise technique et ma capacité à appliquer ces compétences pour résoudre des problèmes réels et fournir des insights précieux. J'espère que ces exemples seront illustratifs de mes compétences.</p>
-    
+        <h3 class="power-title"><span class="white-text">Exemples à travers des projets</span></h3>
+        <h4 class="power-title"><span class="neon-blue">Rstudio</span></h4>
+
         <div class="image-text-container">
             <div class="image-container">
-                <img src="img/powerbi_ligue_1_p1.png" alt="Image 1">
-                <img src="img/powerbi_ligue_1_p2.png" alt="Image 2">
+                <img src="img/rstudio.png" alt="Image 1">
             </div>
             <div class="text-container">
-                <p>Ce texte est associé aux images ci-contre. Il peut décrire les projets ou fournir des informations supplémentaires sur le contenu visualisé dans les images.</p>
+                <p>Dans un premier temps, j'aimerais vous présenter RStudio. RStudio est un environnement de développement pour le langage de programmation statistique R, qui permet de réaliser des applications de méthodes statistiques comme la classification de maladies ou de populations, par exemple. Il permet aussi de réaliser la visualisation graphique des données, tout comme Power BI.</p>
             </div>
+        </div>
+
+        <h4 class="power-title">  <span class="neon-blue">Étude</span>
+            <span class="white-text">sur</span>
+            <span class="neon-blue">l’évolution du poids</span></h4>
+
+        <div class="image-text-container">
+            <div class="text-container">
+                <p>Lors de ma formation, j'ai utilisé des méthodes permettant l'analyse de série chronologique avec RStudio pour analyser une série des variations de température d'un régime alimentaire. En appliquant ces techniques, j'ai mis en évidence des tendances et des cycles saisonniers. Vous trouverez mon rapport sur ce projet à votre droite.</p>
+            </div>  
+            <div class="pdf-container">
+                <embed src="img/Rapport_etude.pdf" type="application/pdf">
+            </div>          
         </div>
     </div>
 
