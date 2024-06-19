@@ -24,6 +24,7 @@
             max-width: 1200px;
             line-height: 1.8;
             flex: 1;
+            width: 100%; 
         }
         .content p {
             margin-bottom: 1em;
@@ -34,8 +35,9 @@
         }
         .image-text-container {
             display: flex;
-            gap: 20px;
+            gap: 20px; 
             padding: 20px 0;
+            justify-content: center; 
         }
         .image-container {
             flex: 1;
@@ -45,10 +47,11 @@
         }
 
         .image-container_2 {
-            flex: 1;
+            flex: 0 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-right: 20px; 
         }
 
         .image-container img {
@@ -74,6 +77,7 @@
         .text-container p {
             margin: 0;
         }
+
         .application-image {
             max-width: 80%; 
         }
@@ -166,7 +170,6 @@
 
 <h4 class="power-title"><span class="white-text">Technologie</span> <span class="neon-blue">utilisé</span></h4>
 
-    
 <div class="image-text-container">
     <div class="image-container_2">
         <img src="img/html.png" alt="Image 1">
@@ -174,9 +177,12 @@
         <img src="img/js.png" alt="Image 1">
         <img src="img/nodejs.png" alt="Image 1">
         <img src="img/mamp.png" alt="Image 1">
+        <img src="img/python.png" alt="Image 1">
     </div>
-</div>
-</div>
+    <div class="text-container">
+        <p>Durant ma deuxième année de BUT en Science des données, j'ai eu l'opportunité de réaliser un projet consistant à collecter, traiter, et visualiser des données grâce à du code Python. J'ai décidé d'extraire les données du site de la Ligue 1, étant moi-même amateur de football, puis de créer une visualisation. Ce projet était intéressant car nous devions non seulement réaliser la visualisation, mais aussi nous occuper de la récolte et du traitement des données, deux phases extrêmement importantes dans le travail d'un Data Analyst, un métier que je pourrais exercer.</p>
+    </div>
+</div> 
 
     <script src="script.js"></script>
     <footer>

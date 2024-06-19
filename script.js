@@ -1,3 +1,4 @@
+// Script.js
 function setupNavLinks() {
     const navLinks = document.querySelectorAll('nav ul li a, .nav-links a, .footer-links a, .buttons a');
     const offset = 80;
