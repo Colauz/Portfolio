@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Web – HolaCiné | Portfolio Laurian Jamin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques à cette page */
+        .project-header {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 0 5%;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 3rem 0 2rem;
+            color: #fff;
+        }
+
+        .section-title .neon-blue {
+            text-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .text-image-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .text-content {
+            flex: 1;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .text-content p {
+            margin-bottom: 1rem;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .pdf-embed {
+            width: 100%;
+            max-width: 600px;
+            height: 700px;
+            border: 2px solid #00aaff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.2);
+        }
+
+        .screenshots-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .screenshot {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.03);
+        }
+
+        .tech-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-item img {
+            width: 60px;
+            height: 60px;
+            filter: invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .tech-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .tech-item p {
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 2rem auto;
+            padding: 12px 25px;
+            background-color: transparent;
+            color: #00aaff;
+            border: 2px solid #00aaff;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #00aaff;
+            color: #000;
+            box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .text-image-container {
+                flex-direction: column;
+            }
+
+            .pdf-embed {
+                height: 500px;
+            }
+
+            .tech-container {
+                gap: 1rem;
+            }
+
+            .screenshots-container {
+                gap: 1rem;
+            }
+
+            .screenshot {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bouton de retour -->
+    <button class="back-button" onclick="window.location.href='index.html'">
+        ← Retour au portfolio
+    </button>
+
+    <!-- En-tête du projet -->
+    <div class="project-header">
+        <h1 class="project-title">
+            <span class="neon-blue">HolaCiné</span> –
+            <span class="white-text">Site de recommandation de films</span>
+        </h1>
+        <p class="project-subtitle">
+            Développement full-stack d'une plateforme de recommandation de films,
+            de l'analyse à la conception, en passant par l'implémentation d'un algorithme de similarité cosinus.
+            <strong>Technos</strong> : HTML/CSS/JS, Node.js, Python, MySQL.
+        </p>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="content-wrapper">
+        <!-- Dossier d'analyse -->
+        <h2 class="section-title">
+            <span class="neon-blue">Dossier d'analyse</span>
+        </h2>
+        <div class="text-image-container">
+            <div class="text-content">
+                <p>
+                    Ce dossier répond à un <strong>appel d'offres fictif</strong> pour le développement d'un site de recommandation de films.
+                    Il détaille la <strong>méthodologie</strong>, les <strong>choix technologiques</strong>,
+                    et les <strong>justifications</strong> pour le client, en utilisant un langage clair et accessible.
+                </p>
+                <p>
+                    <strong>Objectifs</strong> :
+                </p>
+                <ul>
+                    <li>Définir les besoins fonctionnels et non-fonctionnels.</li>
+                    <li>Proposer une architecture technique adaptée.</li>
+                    <li>Planifier les étapes de développement.</li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <embed
+                    src="img/HolaCiné_Dossier_D_analyse_Jamin_Capilla.pdf"
+                    class="pdf-embed"
+                    type="application/pdf">
+            </div>
+        </div>
+
+        <!-- Dossier de conception -->
+        <h2 class="section-title">
+            <span class="neon-blue">Dossier de conception</span>
+        </h2>
+        <div class="text-image-container">
+            <div class="image-content">
+                <embed
+                    src="img/dossier_conception_holacine_jamin_capilla.pdf"
+                    class="pdf-embed"
+                    type="application/pdf">
+            </div>
+            <div class="text-content">
+                <p>
+                    Le dossier de conception est destiné aux <strong>développeurs</strong> et contient :
+                </p>
+                <ul>
+                    <li>Des <strong>diagrammes UML</strong> (cas d'utilisation, classes, séquence).</li>
+                    <li>Une <strong>architecture technique détaillée</strong> (front-end, back-end, base de données).</li>
+                    <li>Les <strong>algorithmes</strong> utilisés (recommandation par similarité cosinus).</li>
+                    <li>Les <strong>APIs</strong> et flux de données.</li>
+                </ul>
+                <p>
+                    Ce dossier a permis de <strong>structurer le développement</strong> et d’assurer une cohérence entre les membres de l’équipe.
+                </p>
+            </div>
+        </div>
+
+        <!-- Captures d'écran du site -->
+        <h2 class="section-title">
+            <span class="white-text">Captures du</span>
+            <span class="neon-blue">site web</span>
+        </h2>
+        <div class="screenshots-container">
+            <img src="img/movie_1.png" alt="Page d'accueil – HolaCiné" class="screenshot">
+            <img src="img/movie_2.png" alt="Recherche de films – HolaCiné" class="screenshot">
+            <img src="img/movie_3.png" alt="Détails d'un film – HolaCiné" class="screenshot">
+            <img src="img/movie_4.png" alt="Recommandations – HolaCiné" class="screenshot">
+            <img src="img/movie_5.png" alt="Profil utilisateur – HolaCiné" class="screenshot">
+        </div>
+
+        <!-- Technologies utilisées -->
+        <h2 class="section-title">
+            <span class="white-text">Stack</span>
+            <span class="neon-blue">technique</span>
+        </h2>
+        <div class="text-image-container">
+            <div class="text-content">
+                <p>
+                    Pour ce projet, j’ai utilisé une combinaison de technologies pour le <strong>front-end</strong> et le <strong>back-end</strong> :
+                </p>
+                <ul>
+                    <li>
+                        <strong>Front-end</strong> : HTML5, CSS3, JavaScript (vanilla) pour une interface réactive et moderne.
+                    </li>
+                    <li>
+                        <strong>Back-end</strong> : Node.js pour la logique serveur et Python pour l’algorithme de recommandation (similarité cosinus).
+                    </li>
+                    <li>
+                        <strong>Base de données</strong> : MySQL pour stocker les films, utilisateurs et préférences.
+                    </li>
+                    <li>
+                        <strong>Outils</strong> : MAMP pour l’environnement local, Git pour le versioning.
+                    </li>
+                </ul>
+                <p>
+                    Ce projet m’a permis de <strong>renforcer mes compétences</strong> en :
+                </p>
+                <ul>
+                    <li>Développement full-stack.</li>
+                    <li>Conception d’algorithmes de recommandation.</li>
+                    <li>Travail en équipe et gestion de projet.</li>
+                </ul>
+            </div>
+            <div class="tech-container">
+                <div class="tech-item">
+                    <img src="img/html.png" alt="HTML5">
+                    <p>HTML5</p>
+                </div>
+                <div class="tech-item">
+                    <img src="img/css.png" alt="CSS3">
+                    <p>CSS3</p>
+                </div>
+                <div class="tech-item">
+                    <img src="img/js.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech-item">
+                    <img src="img/nodejs.png" alt="Node.js">
+                    <p>Node.js</p>
+                </div>
+                <div class="tech-item">
+                    <img src="img/python.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="tech-item">
+                    <img src="img/mamp.png" alt="MAMP">
+                    <p>MAMP</p>
+                </div>
+                <div class="tech-item">
+                    <img src="img/mysql.png" alt="MySQL">
+                    <p>MySQL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Retrouvez-moi sur :</p>
+            <div class="social-icons-footer">
+                <a href="https://github.com/Colauz" target="_blank" rel="noopener noreferrer">
+                    <div class="icon-circle">
+                        <img src="img/github.svg" alt="GitHub">
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/laurian-jamin/" target="_blank" rel="noopener noreferrer">
+                    <div class="icon-circle">
+                        <img src="img/linkedin.svg" alt="LinkedIn">
+                    </div>
+                </a>
+                <a href="https://mastodon.social/@Niaphe_ow" target="_blank" rel="noopener noreferrer">
+                    <div class="icon-circle">
+                        <img src="img/mastodon.svg" alt="Mastodon">
+                    </div>
+                </a>
+                <a href="https://gitlab.com/jaminfollietlaurian" target="_blank" rel="noopener noreferrer">
+                    <div class="icon-circle">
+                        <img src="img/gitlab.svg" alt="GitLab">
+                    </div>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#about">À propos</a>
+                <a href="index.html#skills">Compétences</a>
+                <a href="index.html#education">Parcours</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <p>© 2025 Laurian Jamin | Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

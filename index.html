@@ -1,23 +1,350 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Jamin Laurian</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio de Laurian Jamin, étudiant ingénieur en informatique spécialisé en développement logiciel, data science et cybersécurité. Découvrez mes projets, compétences et expériences professionnelles chez Enedis.">
+    <title>Laurian Jamin | Portfolio Ingénieur Informatique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="neon-blue">Laurian</span><span class="white-text">Jamin</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#about" class="nav-link" data-fr="À propos" data-en="About"></a></li>
+                        <li><a href="#skills" class="nav-link" data-fr="Compétences" data-en="Skills"></a></li>
+                        <li><a href="#projects" class="nav-link" data-fr="Projets" data-en="Projects"></a></li>
+                        <li><a href="#experience" class="nav-link" data-fr="Expérience" data-en="Experience"></a></li>
+                        <li><a href="#contact" class="nav-link" data-fr="Contact" data-en="Contact"></a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switcher">
+                    <a href="#" class="lang-link active" data-lang="fr">FR</a>
+                    <span>|</span>
+                    <a href="#" class="lang-link" data-lang="en">EN</a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-<div id="navbar-placeholder"></div>
-<div id="about-placeholder"></div>
-<div id="skills-placeholder"></div>
-<div id="education-placeholder"></div>
-<div id="enedis-placeholder"></div>
-<div id="contact-placeholder"></div>
-<div id="footer-placeholder"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typed-text" data-fr="Développeur Logiciel|Alternant @Enedis|Étudiant Ingénieur" data-en="Software Developer|Apprentice @Enedis|Engineering Student"></span>
+                        <span class="cursor">|</span>
+                    </h1>
+                    <p class="hero-subtitle" data-fr="Étudiant ingénieur en informatique à l'ISIMA, spécialisé en développement full-stack, data science et cybersécurité. Passionné par la création d'outils innovants et l'optimisation de processus pour Enedis." data-en="Computer Science Engineering student at ISIMA, specializing in full-stack development, data science, and cybersecurity. Passionate about creating innovative tools and optimizing processes for Enedis."></p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" data-fr="Voir mes projets" data-en="View my projects"></a>
+                        <a href="assets/pdf/CV_Laurian_Jamin_FR.pdf" class="btn btn-secondary" download data-fr="Télécharger mon CV (FR)" data-en="Download my CV (EN)"></a>
+                    </div>
+                </div>
+                    <div class="hero-image">
+                        <img src="assets/img/laurian_profil.jpg" alt="Laurian Jamin" class="profile-img">
+                    </div>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Section À propos -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-fr="À propos de moi" data-en="About me"></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-fr="Je suis un étudiant ingénieur en informatique en deuxième année à l'<strong>ISIMA</strong> (Clermont-Ferrand), actuellement en alternance chez <strong>Enedis</strong> en tant que développeur logiciel. Mon parcours académique et professionnel m'a permis de développer une expertise en <strong>développement full-stack</strong>, <strong>data science</strong>, et <strong>cybersécurité</strong>." data-en="I am a second-year Computer Science Engineering student at <strong>ISIMA</strong> (Clermont-Ferrand), currently working as a software developer at <strong>Enedis</strong>. My academic and professional journey has allowed me to develop expertise in <strong>full-stack development</strong>, <strong>data science</strong>, and <strong>cybersecurity</strong>."></p>
+                    <p data-fr="Mon approche combine <strong>rigueur technique</strong> et <strong>créativité</strong> pour concevoir des solutions logicielles robustes et innovantes. Je suis particulièrement intéressé par les projets qui allient <strong>impact concret</strong> et <strong>innovation technologique</strong>, comme mes contributions chez Enedis ou le développement de plateformes comme HolaCiné." data-en="My approach combines <strong>technical rigor</strong> and <strong>creativity</strong> to design robust and innovative software solutions. I am particularly interested in projects that combine <strong>tangible impact</strong> and <strong>technological innovation</strong>, such as my contributions at Enedis or the development of platforms like HolaCiné."></p>
+                    <div class="skills-tags">
+                        <span data-fr="Développement Web" data-en="Web Development"></span>
+                        <span data-fr="Data Science" data-en="Data Science"></span>
+                        <span data-fr="Symfony" data-en="Symfony"></span>
+                        <span data-fr="Python" data-en="Python"></span>
+                        <span data-fr="Cybersécurité" data-en="Cybersecurity"></span>
+                        <span data-fr="UML" data-en="UML"></span>
+                        <span data-fr="Git" data-en="Git"></span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="assets/img/about_illustration.svg" alt="Illustration développement" class="illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-fr="Mes compétences" data-en="My skills"></h2>
+            <div class="skills-content">
+                <!-- Développement Logiciel -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 data-fr="Développement Logiciel" data-en="Software Development"></h3>
+                    <p data-fr="Expérience en développement <strong>full-stack</strong> avec <strong>Python</strong>, <strong>Symfony</strong>, <strong>JavaScript</strong>, et <strong>Node.js</strong>. Conception d'applications modulaires et maintenables, avec une attention particulière à la <strong>qualité du code</strong> et aux <strong>bonnes pratiques</strong> (clean code, tests unitaires, documentation)." data-en="Full-stack development experience with <strong>Python</strong>, <strong>Symfony</strong>, <strong>JavaScript</strong>, and <strong>Node.js</strong>. Design of modular and maintainable applications, with a focus on <strong>code quality</strong> and <strong>best practices</strong> (clean code, unit tests, documentation)."></p>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Symfony</span>
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>Electron.js</span>
+                        <span>C++</span>
+                    </div>
+                </div>
+                <!-- Data Science -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-fr="Data Science" data-en="Data Science"></h3>
+                    <p data-fr="Analyse de données avec <strong>Pandas</strong>, <strong>Power BI</strong>, et <strong>SQL</strong>. Développement d'<strong>algorithmes de recommandation</strong> (similarité cosinus) et traitement de données massives. Expérience en <strong>visualisation de données</strong> (Power BI, Matplotlib) et en conception d'outils décisionnels pour Enedis." data-en="Data analysis with <strong>Pandas</strong>, <strong>Power BI</strong>, and <strong>SQL</strong>. Development of <strong>recommendation algorithms</strong> (cosine similarity) and large-scale data processing. Experience in <strong>data visualization</strong> (Power BI, Matplotlib) and decision-making tool design for Enedis."></p>
+                    <div class="skill-tags">
+                        <span>Pandas</span>
+                        <span>Power BI</span>
+                        <span>SQL</span>
+                        <span>R</span>
+                        <span>Excel (VBA)</span>
+                        <span>Matplotlib</span>
+                    </div>
+                </div>
+                <!-- Cybersécurité -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-fr="Cybersécurité" data-en="Cybersecurity"></h3>
+                    <p data-fr="Connaissances en <strong>sécurité des applications web</strong> (OWASP Top 10), <strong>bonnes pratiques de développement sécurisé</strong> (chiffrement, authentification), et <strong>migration d'applications locales vers le web</strong> (ex : projet Enedis avec Symfony pour répondre aux contraintes RGPD et cybersécurité)." data-en="Knowledge of <strong>web application security</strong> (OWASP Top 10), <strong>secure development best practices</strong> (encryption, authentication), and <strong>migration of local applications to the web</strong> (e.g., Enedis project with Symfony to meet GDPR and cybersecurity constraints)."></p>
+                    <div class="skill-tags">
+                        <span>Symfony</span>
+                        <span>OWASP</span>
+                        <span>Chiffrement</span>
+                        <span>Authentification</span>
+                        <span>RGPD</span>
+                    </div>
+                </div>
+                <!-- Gestion de Projet -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 data-fr="Gestion de Projet" data-en="Project Management"></h3>
+                    <p data-fr="Expérience en <strong>gestion de projet Agile</strong> (Scrum, Kanban), <strong>modélisation UML</strong> (diagrammes de classes, cas d'utilisation), et <strong>travail en équipe pluridisciplinaire</strong>. Utilisation d'outils comme <strong>Git</strong>, <strong>Trello</strong>, <strong>Jira</strong>, et <strong>Confluence</strong> pour organiser le travail et suivre les progrès." data-en="Experience in <strong>Agile project management</strong> (Scrum, Kanban), <strong>UML modeling</strong> (class diagrams, use cases), and <strong>cross-functional teamwork</strong>. Use of tools like <strong>Git</strong>, <strong>Trello</strong>, <strong>Jira</strong>, and <strong>Confluence</strong> to organize work and track progress."></p>
+                    <div class="skill-tags">
+                        <span>UML</span>
+                        <span>Git</span>
+                        <span>Agile</span>
+                        <span>Trello</span>
+                        <span>Jira</span>
+                        <span>Confluence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets (version mise à jour) -->
+<section class="section" id="projects">
+    <div class="container">
+        <h2 class="section-title" data-fr="Mes projets" data-en="My projects"></h2>
+        <div class="projects-grid">
+            <!-- Projet HolaCiné (fusionné) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/img/holacine_preview.jpg" alt="HolaCiné - Plateforme de films">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 data-fr="HolaCiné" data-en="HolaCiné"></h3>
+                        <div class="project-tags">
+                            <span data-fr="Full-Stack" data-en="Full-Stack"></span>
+                            <span data-fr="Python" data-en="Python"></span>
+                            <span data-fr="Node.js" data-en="Node.js"></span>
+                            <span data-fr="MySQL" data-en="MySQL"></span>
+                            <span data-fr="Algorithmes" data-en="Algorithms"></span>
+                        </div>
+                    </div>
+                    <p data-fr="Plateforme complète de gestion et recommandation de films développée en équipe. Combine les fonctionnalités d'une base de données type IMDb avec un système de recommandation personnalisé (algorithme de similarité cosinus). Développé avec Node.js, Python, MySQL et Deno.js." data-en="Complete movie management and recommendation platform developed in a team. Combines IMDb-like database features with a personalized recommendation system (cosine similarity algorithm). Developed with Node.js, Python, MySQL, and Deno.js."></p>
+                    <a href="projects/holacine.html" class="btn btn-project" data-fr="Voir le projet" data-en="View project"></a>
+                </div>
+            </div>
+            <!-- Projet Enedis -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/img/enedis_preview.jpg" alt="Outil de conformité Enedis">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 data-fr="Outil de Conformité Enedis" data-en="Enedis Compliance Tool"></h3>
+                        <div class="project-tags">
+                            <span data-fr="Symfony" data-en="Symfony"></span>
+                            <span data-fr="Python" data-en="Python"></span>
+                            <span data-fr="Cybersécurité" data-en="Cybersecurity"></span>
+                            <span data-fr="Power BI" data-en="Power BI"></span>
+                        </div>
+                    </div>
+                    <p data-fr="Refonte d'un outil décisionnel pour vérifier la conformité des disjoncteurs HTA chez Enedis. Migration de Python vers Symfony pour répondre aux contraintes de cybersécurité et RGPD. Optimisation des performances (temps de traitement divisé par 3) et intégration dans les processus métiers." data-en="Redesign of a decision-making tool to verify HTA circuit breaker compliance at Enedis. Migration from Python to Symfony to meet cybersecurity and GDPR constraints. Performance optimization (processing time divided by 3) and integration into business processes."></p>
+                    <a href="projects/enedis.html" class="btn btn-project" data-fr="Voir le projet" data-en="View project"></a>
+                </div>
+            </div>
+            <!-- Projet Shazam-like -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/img/shazam_preview.jpg" alt="Application Shazam-like">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 data-fr="Application Shazam-like" data-en="Shazam-like Application"></h3>
+                        <div class="project-tags">
+                            <span data-fr="Electron.js" data-en="Electron.js"></span>
+                            <span data-fr="C++" data-en="C++"></span>
+                            <span data-fr="Traitement audio" data-en="Audio Processing"></span>
+                        </div>
+                    </div>
+                    <p data-fr="Application de reconnaissance musicale développée avec Electron.js et C++. Utilisation d'algorithmes de traitement audio (FFT, fingerprinting) pour identifier des morceaux de musique à partir d'un extrait sonore. Projet académique réalisé à l'ISIMA." data-en="Music recognition application developed with Electron.js and C++. Uses audio processing algorithms (FFT, fingerprinting) to identify music tracks from a sound clip. Academic project completed at ISIMA."></p>
+                    <a href="projects/shazam.html" class="btn btn-project" data-fr="Voir le projet" data-en="View project"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Section Expérience -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-fr="Mon expérience" data-en="My experience"></h2>
+            <div class="timeline">
+                <!-- Enedis (Alternance actuelle) -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-fr="Alternant Développeur Logiciel" data-en="Software Developer Apprentice"></h3>
+                        <p class="timeline-company">Enedis, Chambéry, France</p>
+                        <p class="timeline-date" data-fr="Septembre 2023 – Présent" data-en="September 2023 – Present"></p>
+                        <p data-fr="Développement et optimisation d'outils décisionnels pour la conformité des disjoncteurs HTA. Migration d'une application Python vers Symfony pour répondre aux contraintes de cybersécurité et RGPD. Réduction du temps de traitement de 3 minutes à 1 minute, et intégration de l'outil dans les processus métiers d'Enedis Alpes." data-en="Development and optimization of decision-making tools for HTA circuit breaker compliance. Migration of a Python application to Symfony to meet cybersecurity and GDPR constraints. Reduction of processing time from 3 minutes to 1 minute, and integration of the tool into Enedis Alpes business processes."></p>
+                        <div class="skill-tags">
+                            <span>Symfony</span>
+                            <span>Python</span>
+                            <span>UML</span>
+                            <span>Git</span>
+                            <span>Power BI</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enedis (Stage 2023) -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-fr="Stage : Analyse de Conformité" data-en="Internship: Compliance Analysis"></h3>
+                        <p class="timeline-company">Enedis, Chambéry, France</p>
+                        <p class="timeline-date" data-fr="Mars – Juin 2023" data-en="March – June 2023"></p>
+                        <p data-fr="Conception d'un outil de suivi pour la maintenance des postes sources et d'un outil de comparaison de données utilisant Python et Excel. Automatisation de la vérification de 111 plans de protection, réduisant les erreurs manuelles et améliorant l'efficacité des équipes techniques." data-en="Design of a tracking tool for substation maintenance and a data comparison tool using Python and Excel. Automation of the verification of 111 protection plans, reducing manual errors and improving the efficiency of technical teams."></p>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>Excel (VBA)</span>
+                            <span>Power BI</span>
+                            <span>Automatisation</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- BUT Science des Données -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-fr="BUT Science des Données" data-en="Bachelor in Data Science"></h3>
+                        <p class="timeline-company">IUT Aurillac, Université Clermont Auvergne, France</p>
+                        <p class="timeline-date" data-fr="2021 – 2024" data-en="2021 – 2024"></p>
+                        <p data-fr="Diplômé avec spécialisation en <strong>Visualisation et Conception d'Outils Décisionnels (VCOD)</strong>. Projet phare : développement de la plateforme <strong>HolaCiné</strong> (recommandation de films avec algorithme de similarité cosinus). Acquis des compétences en traitement de données (Pandas), visualisation (Power BI), et développement web (Node.js, Python)." data-en="Graduated with a specialization in <strong>Visualization and Decision-Making Tool Design (VCOD)</strong>. Key project: development of the <strong>HolaCiné</strong> platform (movie recommendations with cosine similarity algorithm). Acquired skills in data processing (Pandas), visualization (Power BI), and web development (Node.js, Python)."></p>
+                        <div class="skill-tags">
+                            <span>Node.js</span>
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>Power BI</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lycée -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-fr="Baccalauréat Technologique STI2D" data-en="Technological High School Diploma (STI2D)"></h3>
+                        <p class="timeline-company">Lycée Gaspard Monge, Chambéry, France</p>
+                        <p class="timeline-date" data-fr="2019 – 2021" data-en="2019 – 2021"></p>
+                        <p data-fr="Spécialité <strong>Innovation Technologique et Éco-Conception (ITEC)</strong>. Mention Assez Bien. Projet de fin d'études : conception d'un prototype éco-responsable utilisant des capteurs Arduino." data-en="Specialization in <strong>Technological Innovation and Eco-Design (ITEC)</strong>. Grade: Good. Final project: design of an eco-friendly prototype using Arduino sensors."></p>
+                        <div class="skill-tags">
+                            <span>Conception</span>
+                            <span>Innovation</span>
+                            <span>Éco-design</span>
+                            <span>Arduino</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-fr="Contactez-moi" data-en="Contact me"></h2>
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Nom" data-fr="Nom" data-en="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" data-fr="Email" data-en="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Votre message" data-fr="Votre message" data-en="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-fr="Envoyer" data-en="Send"></button>
+                </form>
+                <div class="contact-info">
+                    <h3 data-fr="Mes coordonnées" data-en="My details"></h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:jaminfollietlaurian@gmail.com">jaminfollietlaurian@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <span>+33 7 67 85 60 14</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-fr="Saint Pierre d'Albigny, France" data-en="Saint Pierre d'Albigny, France"></span></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://github.com/Colauz" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/laurian-jamin/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://gitlab.com/jaminfollietlaurian" target="_blank" aria-label="GitLab"><i class="fab fa-gitlab"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Laurian Jamin. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#home" data-fr="Accueil" data-en="Home"></a>
+                    <a href="assets/pdf/CV_Laurian_Jamin_FR.pdf" download data-fr="CV Français" data-en="French CV"></a>
+                    <a href="assets/pdf/CV_Laurian_Jamin_EN.pdf" download data-fr="CV Anglais" data-en="English CV"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
