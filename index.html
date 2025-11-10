@@ -1,23 +1,541 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Jamin Laurian</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Laurian Jamin | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
+
 <body>
 
-<div id="navbar-placeholder"></div>
-<div id="about-placeholder"></div>
-<div id="skills-placeholder"></div>
-<div id="education-placeholder"></div>
-<div id="enedis-placeholder"></div>
-<div id="contact-placeholder"></div>
-<div id="footer-placeholder"></div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Laurian Jamin</div>
 
-<script src="script.js"></script>
+            <ul class="nav-links">
+                <li><a href="#home" data-fr="Accueil" data-en="Home"></a></li>
+                <li><a href="#about" data-fr="À propos" data-en="About"></a></li>
+                <li><a href="#skills" data-fr="Compétences" data-en="Skills"></a></li>
+                <li><a href="#experience" data-fr="Expérience" data-en="Experience"></a></li>
+                <li><a href="#education" data-fr="Formation" data-en="Education"></a></li>
+                <li><a href="#projects" data-fr="Projets" data-en="Projects"></a></li>
+                <li><a href="#contact" data-fr="Contact" data-en="Contact"></a></li>
+            </ul>
+
+            <div class="lang-switcher">
+                <a href="#" class="lang-link active" data-lang="fr">FR</a>
+                <span>|</span>
+                <a href="#" class="lang-link" data-lang="en">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <section id="home">
+            <img src="assets/img/laurian__photo_profil.jpg" alt="Photo de profil de Laurian Jamin" class="profile-img">
+            <h1 data-fr="Développeur Logiciel & Étudiant Ingénieur" data-en="Software Developer & Engineering Student">
+            </h1>
+            <p class="text-center"
+                data-fr="Étudiant ingénieur en informatique à l'ISIMA, spécialisé en développement full-stack, data science et cybersécurité. Passionné par la création d'outils innovants."
+                data-en="Computer Science Engineering student at ISIMA, specializing in full-stack development, data science, and cybersecurity. Passionate about creating innovative tools.">
+            </p>
+            <div class="text-center">
+                <a href="#projects" class="btn">
+                    <i class="fas fa-rocket"></i>
+                    <span data-fr="Voir mes projets" data-en="View my projects"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 data-fr="À propos de moi" data-en="About me"></h2>
+            <p data-fr="Je suis un étudiant ingénieur en informatique en deuxième année à l'ISIMA (Clermont-Ferrand), actuellement en alternance chez Enedis en tant que développeur logiciel. Mon parcours académique et professionnel m'a permis de développer une expertise en développement full-stack, data science, et cybersécurité."
+                data-en="I am a second-year Computer Science Engineering student at ISIMA (Clermont-Ferrand), currently working as a software developer at Enedis. My academic and professional journey has allowed me to develop expertise in full-stack development, data science, and cybersecurity.">
+            </p>
+            <p data-fr="Mon approche combine rigueur technique et créativité pour concevoir des solutions logicielles robustes et innovantes."
+                data-en="My approach combines technical rigor and creativity to design robust and innovative software solutions.">
+            </p>
+
+            <div class="skills-tags">
+                <span class="skill-tag" data-fr="Développement Web" data-en="Web Development"></span>
+                <span class="skill-tag" data-fr="Data Science" data-en="Data Science"></span>
+                <span class="skill-tag" data-fr="Symfony" data-en="Symfony"></span>
+                <span class="skill-tag" data-fr="Deno.js" data-en="Deno.js"></span>
+                <span class="skill-tag" data-fr="Node.js" data-en="Node.js"></span>
+                <span class="skill-tag" data-fr="HTML/CSS" data-en="HTML/CSS"></span>
+                <span class="skill-tag" data-fr="JS" data-en="JS"></span>
+                <span class="skill-tag" data-fr="TS" data-en="TS"></span>
+                <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                <span class="skill-tag" data-fr="Rstudio" data-en="Rstudio"></span>
+                <span class="skill-tag" data-fr="Talend" data-en="Talend"></span>
+                <span class="skill-tag" data-fr="C++" data-en="C++"></span>
+                <span class="skill-tag" data-fr="C#" data-en="C#"></span>
+                <span class="skill-tag" data-fr="SQL" data-en="SQL"></span>
+                <span class="skill-tag" data-fr="NoSQL" data-en="NoSQL"></span>
+                <span class="skill-tag" data-fr="Cybersécurité" data-en="Cybersecurity"></span>
+            </div>
+
+            <div class="cv-download" id="cv-download-link">
+                <a href="#" class="btn">
+                    <i class="fas fa-download"></i>
+                    <span data-fr="Télécharger mon CV" data-en="Download my CV"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 data-fr="Mes compétences" data-en="My skills"></h2>
+
+            <div class="skill-section">
+                <h3 data-fr="Développement Logiciel" data-en="Software Development"></h3>
+                <p data-fr="Expérience en développement full-stack avec Python, Symfony, JavaScript, et Node.js."
+                    data-en="Full-stack development experience with Python, Symfony, JavaScript, and Node.js."></p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Symfony" data-en="Symfony"></span>
+                    <span class="skill-tag" data-fr="JavaScript" data-en="JavaScript"></span>
+                    <span class="skill-tag" data-fr="Node.js" data-en="Node.js"></span>
+                    <span class="skill-tag" data-fr="C++" data-en="C++"></span>
+                    <span class="skill-tag" data-fr="C#" data-en="C#"></span>
+                    <span class="skill-tag" data-fr="HTML/CSS" data-en="HTML/CSS"></span>
+                    <span class="skill-tag" data-fr="JS" data-en="JS"></span>
+                    <span class="skill-tag" data-fr="TS" data-en="TS"></span>
+                    <span class="skill-tag" data-fr="Deno.js" data-en="Deno.js"></span>
+                    <span class="skill-tag" data-fr="Node.js" data-en="Node.js"></span>
+                    <span class="skill-tag" data-fr="Electron.js" data-en="Electron.js"></span>
+                </div>
+            </div>
+
+            <div class="skill-section">
+                <h3 data-fr="Data Science" data-en="Data Science"></h3>
+                <p data-fr="Analyse de données avec Pandas, Power BI, et SQL."
+                    data-en="Data analysis with Pandas, Power BI, and SQL."></p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Pandas" data-en="Pandas"></span>
+                    <span class="skill-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    <span class="skill-tag" data-fr="SQL" data-en="SQL"></span>
+                    <span class="skill-tag" data-fr="NoSQL" data-en="NoSQL"></span>
+                    <span class="skill-tag" data-fr="Rstudio" data-en="Rstudio"></span>
+                    <span class="skill-tag" data-fr="Talend" data-en="Talend"></span>
+                    <span class="skill-tag" data-fr="Microsoft Excel/VBA" data-en="Microsoft Excel/VBA"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 data-fr="Mon expérience professionnelle" data-en="My professional experience"></h2>
+
+            <div class="timeline-item">
+                <div class="timeline-company">Enedis, Chambéry, France</div>
+                <h3 data-fr="Développeur Web et Logiciel (Alternance)" data-en="Web and Software Developer (Apprenticeship)"></h3>
+                <p class="timeline-date" data-fr="Septembre 2024 – Aujourd'hui" data-en="September 2024 – Present"></p>
+                <p data-fr="En alternance chez Enedis et étudiant à l'ISIMA, je travaille sur le développement d'une plateforme web dédiée aux services d'Enedis Alpes. Je pilote également des projets axés sur le traitement et l'analyse de données, principalement en utilisant Python et Symfony pour le développement web."
+                    data-en="As an apprentice at Enedis and a student at ISIMA, I work on developing a web platform dedicated to Enedis Alpes services. I also lead projects focused on data processing and analysis, mainly using Python and Symfony for web development.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Symfony" data-en="Symfony"></span>
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    <span class="skill-tag" data-fr="Développement Web" data-en="Web Development"></span>
+                    <span class="skill-tag" data-fr="UML" data-en="UML"></span>
+                    <span class="skill-tag" data-fr="Microsoft Excel" data-en="Microsoft Excel"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-company">Enedis, Chambéry, France</div>
+                <h3 data-fr="Développeur Web et Logiciel (Alternance)" data-en="Web and Software Developer (Apprenticeship)"></h3>
+                <p class="timeline-date" data-fr="Septembre 2023 – Août 2024" data-en="September 2023 – August 2024"></p>
+                <p data-fr="En troisième année de BUT en Science des Données en alternance, j'ai travaillé chez Enedis sur divers projets. Mes responsabilités comprenaient le développement web avec Symfony, ainsi que la gestion et le traitement de données avec Python et Power BI."
+                    data-en="In the third year of a BUT in Data Science work-study program, I worked at Enedis on various projects. Responsibilities included web development with Symfony, as well as data management and processing with Python and Power BI.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Symfony" data-en="Symfony"></span>
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    <span class="skill-tag" data-fr="Développement Web" data-en="Web Development"></span>
+                    <span class="skill-tag" data-fr="Microsoft Excel" data-en="Microsoft Excel"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-company">Enedis, Chambéry, France</div>
+                <h3 data-fr="Développement d'un outil décisionnel (Intérim)"
+                    data-en="Development of a Decision-Making Tool (Temporary Contract)"></h3>
+                <p class="timeline-date" data-fr="Juillet 2023 – Août 2023" data-en="July 2023 – August 2023"></p>
+                <p data-fr="Analyse et croisement de données Excel via Python pour la mise en forme globale. Travail de bureau impliquant l'analyse de données des fichiers de configuration pour les protections Poste Source."
+                    data-en="Analysis and cross-referencing of Excel data using Python for overall formatting. Office work involving the analysis of data from configuration files for Poste Source protections.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    <span class="skill-tag" data-fr="Analyse des données" data-en="Data Analysis"></span>
+                    <span class="skill-tag" data-fr="Microsoft Excel" data-en="Microsoft Excel"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-company">Enedis, Chambéry, France</div>
+                <h3 data-fr="Mise à jour des plans de protection Poste Source (Stage)"
+                    data-en="Update of Poste Source Protection Plans (Internship)"></h3>
+                <p class="timeline-date" data-fr="Mars 2023 – Juin 2023" data-en="March 2023 – June 2023"></p>
+                <p data-fr="Travail sur l'analyse de conformité des plans de protection. Développement d'un outil de suivi et d'alerte pour la maintenance des disjoncteurs HTA dans les postes sources et d'un outil de comparaison de données pour les disjoncteurs HTA avec interface et coloration."
+                    data-en="Work on the compliance analysis of protection plans. Development of a tracking and alert tool for the maintenance of HTA circuit breakers in source substations and a data comparison tool for HTA circuit breakers with interface and coloring.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    <span class="skill-tag" data-fr="Analyse des données" data-en="Data Analysis"></span>
+                    <span class="skill-tag" data-fr="Microsoft Excel/VBA" data-en="Microsoft Excel/VBA"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 data-fr="Ma formation" data-en="My education"></h2>
+
+            <div class="timeline-item">
+                <div class="timeline-company">ISIMA - Clermont Auvergne INP, Clermont-Ferrand, France</div>
+                <h3 data-fr="Diplôme d'Ingénieur en Informatique" data-en="Engineering Degree in Computer Science"></h3>
+                <p class="timeline-date" data-fr="Septembre 2024 – Août 2027" data-en="September 2024 – August 2027">
+                </p>
+                <p data-fr="Diplôme d'ingénieur en informatique en apprentissage. Formation couvrant le développement logiciel, la sécurité informatique, le développement web, l'internet des objets, le cloud, l'intelligence artificielle, la recherche opérationnelle, l'architecture des systèmes d'information, les réseaux, les bases de données, et la programmation mobile."
+                    data-en="Engineering degree in computer science through apprenticeship. Training covering software development, cybersecurity, web development, IoT, cloud, artificial intelligence, operational research, information systems architecture, networks, databases, and mobile programming.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Symfony" data-en="Symfony"></span>
+                    <span class="skill-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    <span class="skill-tag" data-fr="Développement Web" data-en="Web Development"></span>
+                    <span class="skill-tag" data-fr="C" data-en="C"></span>
+                    <span class="skill-tag" data-fr="C++" data-en="C++"></span>
+                    <span class="skill-tag" data-fr="C#" data-en="C#"></span>
+                    <span class="skill-tag" data-fr="SQL" data-en="SQL"></span>
+                    <span class="skill-tag" data-fr="NoSQL" data-en="NoSQL"></span>
+                    <span class="skill-tag" data-fr="UML" data-en="UML"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-company">Université Clermont Auvergne, Aurillac, France</div>
+                <h3 data-fr="Licence en Science des Données" data-en="Bachelor's Degree in Data Science"></h3>
+                <p class="timeline-date" data-fr="Septembre 2021 – Août 2024" data-en="September 2021 – August 2024">
+                </p>
+                <p data-fr="BUT en Science des Données avec une spécialisation en Cybersécurité. Parcours Visualisation, Conception d'Outils Décisionnels (VCOD). Compétences en traitement et visualisation de données avec Python (Pandas), R Studio et Power BI. Connaissances en enjeux économiques et juridiques liés aux données, notamment le RGPD."
+                    data-en="BUT in Data Science with a specialization in Cybersecurity. VCOD (Visualization, Design of Decision-Making Tools) pathway. Skills in data processing and visualization with Python (Pandas), R Studio, and Power BI. Knowledge of economic and legal issues related to data, including GDPR.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Rstudio" data-en="Rstudio"></span>
+                    <span class="skill-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    <span class="skill-tag" data-fr="Microsoft Excel" data-en="Microsoft Excel"></span>
+                    <span class="skill-tag" data-fr="SQL" data-en="SQL"></span>
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Talend" data-en="Talend"></span>
+                    <span class="skill-tag" data-fr="Brython" data-en="Brython"></span>
+                    <span class="skill-tag" data-fr="Node.js" data-en="Node.js"></span>
+                    <span class="skill-tag" data-fr="Deno.js" data-en="Deno.js"></span>
+                    <span class="skill-tag" data-fr="UML" data-en="UML"></span>
+                    <span class="skill-tag" data-fr="Analyse des données" data-en="Data Analysis"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-company">Lycée Gaspard Monge, Chambéry, France</div>
+                <h3 data-fr="Baccalauréat Technologique STI2D" data-en="Technological High School Diploma STI2D"></h3>
+                <p class="timeline-date" data-fr="Septembre 2018 – Juillet 2021"
+                    data-en="September 2018 – July 2021"></p>
+                <p data-fr="Acquisition de compétences fondamentales en technologies industrielles et en développement durable. Spécialisation en ITEC (Innovation Technologique et Éco-Conception) en terminale, approfondissant mes connaissances en innovation technologique et éco-conception."
+                    data-en="Acquisition of fundamental skills in industrial technologies and sustainable development. Specialization in ITEC (Technological Innovation and Eco-Design) in the final year, deepening my knowledge in technological innovation and eco-design.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Technologies industrielles"
+                        data-en="Industrial Technologies"></span>
+                    <span class="skill-tag" data-fr="Éco-conception" data-en="Eco-Design"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 data-fr="Mes projets" data-en="My projects"></h2>
+
+            <div class="projects-category">
+                <h3 data-fr="Projets scolaires" data-en="Academic Projects"></h3>
+
+                <div class="project-card">
+                    <h4 data-fr="Application Shazam-like" data-en="Shazam-like Application"></h4>
+                    <p class="project-date" data-fr="2024–2025" data-en="2024–2025"></p>
+                    <p class="project-location">ISIMA, Clermont-Ferrand, France</p>
+                    <p data-fr="Développement d'une application de reconnaissance musicale similaire à Shazam, utilisant Electron.js pour le frontend et une API en C++ pour le traitement audio."
+                        data-en="Developed a music recognition application similar to Shazam using Electron.js for the frontend and a C++ API for audio processing.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Electron.js" data-en="Electron.js"></span>
+                        <span class="project-tag" data-fr="C++" data-en="C++"></span>
+                        <span class="project-tag" data-fr="HTML/CSS" data-en="HTML/CSS"></span>
+                        <span class="project-tag" data-fr="JS" data-en="JS"></span>
+                        <span class="project-tag" data-fr="Traitement audio" data-en="Audio Processing"></span>
+                    </div>
+                    <div class="project-link">
+                        <a href="shazam_project.html" class="btn-project">
+                            <i class="fas fa-eye"></i>
+                            <span data-fr="Voir le projet" data-en="View Project"></span>
+                        </a>
+                    </div>
+                    <div class="project-pdf-downloads">
+                        <p data-fr="Téléchargez les rapports du projet :" data-en="Download project reports:"></p>
+                        <div class="pdf-download-item">
+                            <a href="assets/pdf/Dossier_de_Modélisation_de_LowCost_Shazam_Laurian_JAMIN_& _Corentin RICHARD.pdf"
+                                class="btn-pdf" target="_blank" download>
+                                <i class="fas fa-file-pdf"></i>
+                                <span data-fr="Dossier de Modélisation" data-en="Modeling Report"></span>
+                            </a>
+                        </div>
+                        <div class="pdf-download-item">
+                            <a href="assets/pdf/SAE_Larrythmique_Rapport_Technique.pdf" class="btn-pdf" target="_blank"
+                                download>
+                                <i class="fas fa-file-pdf"></i>
+                                <span data-fr="Rapport Technique" data-en="Technical Report"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 data-fr="Site Web IMDb-like" data-en="IMDb-like Website"></h4>
+                    <p class="project-date" data-fr="2023–2024" data-en="2023–2024"></p>
+                    <p class="project-location">IUT Aurillac, Aurillac, France</p>
+                    <p data-fr="Conception et implémentation d'un site web de base de données de films, utilisant Python, Deno.js, HTML/CSS pour le backend et le frontend."
+                        data-en="Designed and implemented a movie database website using Python, Deno.js, and HTML/CSS for the backend and frontend.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Python" data-en="Python"></span>
+                        <span class="project-tag" data-fr="Deno.js" data-en="Deno.js"></span>
+                        <span class="project-tag" data-fr="HTML/CSS" data-en="HTML/CSS"></span>
+                        <span class="project-tag" data-fr="JS" data-en="JS"></span>
+                        <span class="project-tag" data-fr="TS" data-en="TS"></span>
+                    </div>
+                    <div class="project-link">
+                        <a href="holacine_project.html" class="btn-project">
+                            <i class="fas fa-eye"></i>
+                            <span data-fr="Voir le projet" data-en="View Project"></span>
+                        </a>
+                    </div>
+                    <div class="project-pdf-downloads">
+                        <p data-fr="Téléchargez les rapports du projet :" data-en="Download project reports:"></p>
+                        <div class="pdf-download-item">
+                            <a href="assets/pdf/HolaCine_Dossier_Conception_Jamin_Capilla.pdf" class="btn-pdf"
+                                target="_blank" download>
+                                <i class="fas fa-file-pdf"></i>
+                                <span data-fr="Dossier de Conception" data-en="Design Report"></span>
+                            </a>
+                        </div>
+                        <div class="pdf-download-item">
+                            <a href="assets/pdf/HolaCine_Dossier_Analyse_Jamin_Capilla.pdf" class="btn-pdf"
+                                target="_blank" download>
+                                <i class="fas fa-file-pdf"></i>
+                                <span data-fr="Dossier d'Analyse" data-en="Analysis Report"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 data-fr="Jeu Akinator-like" data-en="Akinator-like Game"></h4>
+                    <p class="project-date" data-fr="2022–2023" data-en="2022–2023"></p>
+                    <p class="project-location">IUT Aurillac, Aurillac, France</p>
+                    <p data-fr="Création d'un jeu similaire à Akinator en Python, axé sur les structures de données et les algorithmes."
+                        data-en="Created a game similar to Akinator using Python, focusing on data structures and algorithms.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Python" data-en="Python"></span>
+                        <span class="project-tag" data-fr="Algorithmes" data-en="Algorithms"></span>
+                    </div>
+                    <div class="project-link">
+                        <a href="akinator_project.html" class="btn-project">
+                            <i class="fas fa-eye"></i>
+                            <span data-fr="Voir le projet" data-en="View Project"></span>
+                        </a>
+                    </div>
+                    <div class="project-pdf-download">
+                        <a href="assets/pdf/Projet_Akinator.pdf" class="btn-pdf" target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-fr="Télécharger le rapport" data-en="Download Report"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 data-fr="Analyse de la qualité nutritionnelle" data-en="Nutrition Quality Analysis"></h4>
+                    <p class="project-date" data-fr="2021–2022" data-en="2021–2022"></p>
+                    <p class="project-location">IUT Aurillac, Aurillac, France</p>
+                    <p data-fr="Collecte, analyse et traitement de données sur la qualité nutritionnelle des étudiants, utilisant Python et des outils statistiques. Ce projet explore l'impact de l'alimentation sur la neurogenèse et la santé mentale."
+                        data-en="Collected, analyzed, and processed data on student nutrition quality using Python and statistical tools. This project explores the impact of diet on neurogenesis and mental health.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Python" data-en="Python"></span>
+                        <span class="project-tag" data-fr="Analyse de données" data-en="Data Analysis"></span>
+                        <span class="project-tag" data-fr="Power BI" data-en="Power BI"></span>
+                    </div>
+                    <div class="project-link">
+                        <a href="nutrition_project.html" class="btn-project">
+                            <i class="fas fa-eye"></i>
+                            <span data-fr="Voir le projet" data-en="View Project"></span>
+                        </a>
+                    </div>
+                    <div class="project-pdf-download">
+                        <a href="assets/pdf/Projet_Nutrition_Quality_Analysis.pdf" class="btn-pdf" target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-fr="Télécharger le rapport" data-en="Download Report"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-category">
+                <h3 data-fr="Missions en entreprise" data-en="Professional Experience"></h3>
+
+                <div class="confidential-warning">
+                    <p data-fr="En raison de la nature confidentielle des activités d'Enedis, entreprise de service public, je ne suis pas autorisé à divulguer des détails précis sur mes missions au-delà des résumés présentés ici, conformément aux règles de cybersécurité de l'entreprise."
+                        data-en="Due to the confidential nature of Enedis' activities as a public service company, I am not authorized to disclose specific details about my missions beyond the summaries presented here, in compliance with the company's cybersecurity rules.">
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h4 data-fr="Développeur Web et Logiciel (Alternance)"
+                        data-en="Web & Software Developer (Apprenticeship)"></h4>
+                    <p class="project-date" data-fr="Septembre 2024 – Présent" data-en="September 2024 – Present"></p>
+                    <p class="project-location">Enedis, Chambéry, France</p>
+                    <p data-fr="En alternance chez Enedis et étudiant à l'ISIMA, je développe une plateforme web dédiée aux services d'Enedis Alpes. Je pilote également des projets axés sur le traitement et l'analyse de données, principalement en utilisant Python et Symfony pour le développement web."
+                        data-en="Currently in a work-study program at Enedis and studying at ISIMA, I am developing a web platform dedicated to Enedis Alpes services. Leading projects focused on data processing and analysis, primarily using Python, while employing Symfony for web development.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Symfony" data-en="Symfony"></span>
+                        <span class="project-tag" data-fr="Power BI" data-en="Power BI"></span>
+                        <span class="project-tag" data-fr="Développement Web" data-en="Web Development"></span>
+                        <span class="project-tag" data-fr="Python" data-en="Python"></span>
+                    </div>
+                    <div class="confidential-warning">
+                        <p data-fr="Projet professionnel confidentiel" data-en="Confidential professional project"></p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 data-fr="Développeur Web et Logiciel (Alternance)"
+                        data-en="Web & Software Developer (Apprenticeship)"></h4>
+                    <p class="project-date" data-fr="Septembre 2023 – Août 2024"
+                        data-en="September 2023 – August 2024"></p>
+                    <p class="project-location">Enedis, Chambéry, France</p>
+                    <p data-fr="En troisième année de BUT en Science des Données en alternance, j'ai travaillé chez Enedis sur divers projets. Mes responsabilités comprenaient le développement web avec Symfony, ainsi que la gestion et le traitement de données avec Python et Power BI."
+                        data-en="In the third year of a BUT in Data Science work-study program, I worked at Enedis on various projects. Responsibilities included web development with Symfony, as well as data management and processing with Python and Power BI.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Symfony" data-en="Symfony"></span>
+                        <span class="project-tag" data-fr="RStudio" data-en="RStudio"></span>
+                        <span class="project-tag" data-fr="Power BI" data-en="Power BI"></span>
+                        <span class="project-tag" data-fr="Développement Web" data-en="Web Development"></span>
+                        <span class="project-tag" data-fr="Python" data-en="Python"></span>
+                    </div>
+                    <div class="confidential-warning">
+                        <p data-fr="Projet professionnel confidentiel" data-en="Confidential professional project"></p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 data-fr="Développement d'un outil décisionnel (Intérim)"
+                        data-en="Decision-Making Tool Development (Temp)"></h4>
+                    <p class="project-date" data-fr="Juillet 2023 – Août 2023" data-en="July 2023 – August 2023"></p>
+                    <p class="project-location">Enedis, Chambéry, France</p>
+                    <p data-fr="Analyse et croisement de données Excel via Python pour la mise en forme globale. Travail de bureau impliquant l'analyse de données des fichiers de configuration pour les protections Poste Source."
+                        data-en="Analysis and cross-referencing of Excel data using Python for overall formatting. Office work involving the analysis of data from configuration files for Poste Source protections.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Microsoft Excel" data-en="Microsoft Excel"></span>
+                        <span class="project-tag" data-fr="Power BI" data-en="Power BI"></span>
+                        <span class="project-tag" data-fr="Python" data-en="Python"></span>
+                        <span class="project-tag" data-fr="Analyse des données" data-en="Data Analysis"></span>
+                    </div>
+                    <div class="confidential-warning">
+                        <p data-fr="Projet professionnel confidentiel" data-en="Confidential professional project"></p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 data-fr="Stage : Analyse de conformité des plans de protection Poste Source"
+                        data-en="Internship: Compliance Analysis of Poste Source Protection Plans"></h4>
+                    <p class="project-date" data-fr="Mars 2023 – Juin 2023" data-en="March 2023 – June 2023"></p>
+                    <p class="project-location">Enedis, Chambéry, France</p>
+                    <p data-fr="Mise à jour complète des plans de protection Poste Source. Développement d'un outil de suivi et d'alerte pour la maintenance des disjoncteurs HTA dans les postes sources et d'un outil de comparaison de données pour les disjoncteurs HTA avec interface et coloration."
+                        data-en="Full update of Poste Source protection plans. Developed a tracking and alert tool for the maintenance of HTA circuit breakers in source substations and a data comparison tool for HTA circuit breakers with interface and coloring.">
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-fr="Microsoft Excel" data-en="Microsoft Excel"></span>
+                        <span class="project-tag" data-fr="Python" data-en="Python"></span>
+                        <span class="project-tag" data-fr="Analyse de données" data-en="Data Analysis"></span>
+                    </div>
+                    <div class="confidential-warning">
+                        <p data-fr="Projet professionnel confidentiel" data-en="Confidential professional project"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 data-fr="Contactez-moi" data-en="Contact me">Contactez-moi</h2>
+            
+            <form class="contact-form" action="https://formspree.io/f/mvgdpydd" method="POST">
+                
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Nom" data-fr="Nom" data-en="Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" data-fr="Email" data-en="Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Votre message" data-fr="Votre message" data-en="Your message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <span data-fr="Envoyer" data-en="Send">Envoyer</span>
+                </button>
+            </form>
+
+            <div class="contact-info">
+                <a href="mailto:jaminfollietlaurian@gmail.com" title="Envoyer un email">
+                    <i class="fas fa-envelope"></i>
+                    <span>jaminfollietlaurian@gmail.com</span>
+                </a>
+                <a href="tel:+33767856014" title="Appeler">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+33 7 67 85 60 14</span>
+                </a>
+                <a href="https://www.linkedin.com/in/laurian-jamin/" target="_blank" title="Voir le profil LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Colauz" target="_blank" title="Voir le profil GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p data-fr="© 2025 Laurian Jamin. Tous droits réservés."
+            data-en="© 2025 Laurian Jamin. All rights reserved."></p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
 </body>
+
 </html>
