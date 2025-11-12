@@ -19,15 +19,12 @@ The website is designed to be fully **bilingual (French/English)** and presents 
 
 ## 🛠️ Technologies Used
 
-The portfolio is built on standard web technologies, highlighting the languages and frameworks I master, particularly for the detailed projects.
+The portfolio is built on standard web technologies, highlighting the languages I master.
 
 | Category | Key Tools |
 | :--- | :--- |
 | **Frontend** | `HTML5`, `CSS3`, `JavaScript` (Manages bilingual logic and interactions) |
-| **Projects & Algorithms** | `Python` (Data Science, Algorithms), `TypeScript` (HolaCiné Backend), `C#` (Larrythmique Backend), `C++` (Larrythmique API) |
-| **Frameworks / Libraries** | `Symfony` (Mentioned in work experience), `Electron.js`, `Deno.js`, `Pandas` (Python) |
-| **Database / BI** | `SQL`, `PostgreSQL`, `MySQL`, `Power BI` |
-| **Versioning Tools** | `Git`, `CI/CD` (Mentioned in work experience) |
+| **Versioning Tools** | `Git` |
 
 ---
 
