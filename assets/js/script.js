@@ -1,5 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // 0. Gestion du menu hamburger pour mobile
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            // Toggle les classes active pour le menu et le bouton
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Mise à jour de l'attribut aria-expanded pour l'accessibilité
+            const isExpanded = menuToggle.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Fermer le menu en cliquant sur un lien de navigation
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Fermer le menu en cliquant en dehors
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     // 1. Initialisation de la coloration syntaxique (si présent sur la page)
     if (typeof hljs !== 'undefined') {
         hljs.highlightAll();

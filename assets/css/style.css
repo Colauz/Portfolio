@@ -818,36 +818,313 @@ footer {
 /* =========================================
    10. RESPONSIVE DESIGN
    ========================================= */
+
+/* === Menu Toggle (Hamburger) === */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background-color: var(--light-color);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* Animation du hamburger vers X */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
+}
+
+/* === Tablette (max-width: 992px) === */
 @media (max-width: 992px) {
-    .container { padding: var(--space-md); padding-top: 100px; }
+    .container { 
+        padding: var(--space-md); 
+        padding-top: 100px; 
+    }
     h1 { font-size: 28px; }
     h2 { font-size: 24px; }
     .profile-img { width: 200px; height: 200px; }
+    
+    /* Grilles adaptatives */
+    .demo-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
 }
 
+/* === Mobile Paysage et Grand Mobile (max-width: 768px) === */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: var(--space-md);
+    /* Afficher le menu hamburger */
+    .menu-toggle {
+        display: flex;
     }
+    
+    /* Navbar responsive */
+    .navbar .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: var(--space-sm) var(--space-md);
+    }
+    
+    /* Navigation cachée par défaut sur mobile */
     .nav-links {
+        display: none;
         flex-direction: column;
         gap: var(--space-sm);
         align-items: center;
         text-align: center;
+        width: 100%;
+        padding: var(--space-md) 0;
+        order: 3;
     }
-    .lang-switcher { margin-top: var(--space-sm); }
+    
+    /* Navigation visible quand active */
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-sm);
+    }
+    
+    .nav-links a:hover {
+        background-color: var(--light-color);
+    }
+    
+    .lang-switcher { 
+        margin-left: auto;
+        margin-right: var(--space-md);
+    }
 
-    /* Responsive spécifiques aux projets */
-    .project-meta { flex-direction: column; align-items: center; }
-    section.card-section { padding: 20px; }
-    .pdf-container { height: 400px; }
+    /* Responsive pour projets */
+    .project-meta { 
+        flex-direction: column; 
+        align-items: center;
+        gap: var(--space-sm);
+    }
+    
+    section.card-section { 
+        padding: 20px; 
+    }
+    
+    .pdf-container { 
+        height: 400px; 
+    }
+    
+    /* Tableaux scrollables horizontalement */
+    .skills-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .skills-table th,
+    .skills-table td {
+        min-width: 120px;
+    }
+    
+    /* Timeline responsive */
+    .timeline-item {
+        padding-left: var(--space-md);
+    }
+    
+    .timeline-item::before {
+        left: -8px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    /* Galerie démo */
+    .demo-gallery {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Contact info responsive */
+    .contact-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .contact-info a,
+    .contact-info p {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    /* Formulaire de contact */
+    .contact-form {
+        padding: var(--space-lg);
+    }
+    
+    /* Team members */
+    .team-members {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    /* Project cards */
+    .project-card {
+        padding: var(--space-md);
+    }
+    
+    /* Code blocks scrollables */
+    pre code {
+        max-width: 100%;
+        overflow-x: auto;
+    }
 }
 
+/* === Mobile Portrait (max-width: 576px) === */
 @media (max-width: 576px) {
-    h1 { font-size: 24px; }
-    h2 { font-size: 20px; }
-    .profile-img { width: 180px; height: 180px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
+    
+    .profile-img { 
+        width: 150px; 
+        height: 150px; 
+    }
+    
+    /* Container avec moins de padding */
+    .container {
+        padding: var(--space-sm);
+        padding-top: 90px;
+    }
+    
+    /* Navbar ultra compact */
+    .navbar .container {
+        padding: var(--space-sm);
+    }
+    
+    .logo {
+        font-size: 16px;
+    }
+    
+    /* Boutons plus petits */
+    .btn, .btn-project, .btn-pdf {
+        padding: var(--space-sm) var(--space-sm);
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Tags sur plusieurs lignes */
+    .skills-tags, .project-tags {
+        justify-content: center;
+    }
+    
+    .skill-tag, .project-tag {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    /* PDF viewer plus petit */
+    .pdf-container {
+        height: 300px;
+    }
+    
+    /* Illustrations */
+    .illustration img {
+        border-radius: var(--radius-sm);
+    }
+    
+    /* Citations */
+    .quote {
+        font-size: 1em;
+        padding: 0 var(--space-sm);
+    }
+    
+    .quote::before, .quote::after {
+        font-size: 1.5em;
+    }
+    
+    /* Confidential warning compact */
+    .confidential-warning {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.85em;
+    }
+    
+    .confidential-warning::before {
+        font-size: 1.2em;
+    }
+    
+    /* Footer */
+    footer {
+        padding: var(--space-md) 0;
+        font-size: 12px;
+    }
+    
+    /* Project downloads */
+    .project-pdf-downloads,
+    .project-pdf-download {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .pdf-download-item {
+        width: 100%;
+    }
+    
+    /* Section spacing mobile */
+    section {
+        padding: var(--space-lg) 0;
+    }
+}
+
+/* === Très petits écrans (max-width: 400px) === */
+@media (max-width: 400px) {
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .contact-info a span {
+        font-size: 12px;
+    }
+    
+    .nav-links a {
+        font-size: 14px;
+    }
 }
 
 /* =========================================
@@ -935,4 +1212,18 @@ footer {
 /* Pour ces éléments, on change la couleur de la barre latérale */
 #bibliography li:has(span:not(a))::before {
      background-color: var(--border-color-dark);
+}
+
+/* === Responsive Bibliographie === */
+@media (max-width: 576px) {
+    #bibliography li {
+        padding: var(--space-sm) var(--space-md);
+        flex-wrap: wrap;
+    }
+    
+    #bibliography li a {
+        font-size: 14px;
+        word-break: break-word;
+        white-space: normal;
+    }
 }
