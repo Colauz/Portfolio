@@ -151,3 +151,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// 5. Vidéo de présentation : les chapitres placent la lecture au bon moment.
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('video-showreel');
+    const boutons = document.querySelectorAll('.chapitres button');
+    if (video && boutons.length) {
+        boutons.forEach(bouton => {
+            bouton.addEventListener('click', function() {
+                video.currentTime = parseFloat(this.dataset.t);
+                video.play();
+            });
+        });
+        // Le chapitre en cours est mis en évidence pendant la lecture.
+        video.addEventListener('timeupdate', function() {
+            let actif = null;
+            boutons.forEach(b => { if (video.currentTime >= parseFloat(b.dataset.t)) actif = b; });
+            boutons.forEach(b => b.classList.toggle('actif', b === actif));
+        });
+    }
+
+    // 6. Aperçus des projets : la boucle tourne quand la carte est à l'écran, s'arrête sinon.
+    //    Rien ne bouge si le visiteur a demandé moins d'animations : la couverture reste affichée.
+    const boucles = document.querySelectorAll('video.boucle');
+    const calme = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (boucles.length && !calme && 'IntersectionObserver' in window) {
+        const observateur = new IntersectionObserver(entrees => {
+            entrees.forEach(entree => {
+                const v = entree.target;
+                if (entree.isIntersecting) {
+                    v.play().catch(() => {});
+                } else {
+                    v.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+        boucles.forEach(v => observateur.observe(v));
+    }
+});

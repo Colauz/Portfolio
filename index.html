@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurian Jamin | Portfolio</title>
+    <title>Laurian Jamin | Data, automatisation & IA appliquée</title>
+    <meta name="description" content="Élève ingénieur à l'ISIMA et alternant chez Enedis, je transforme vos fichiers Excel, factures et documents en outils qui tournent seuls : reporting automatisé, tableaux de bord Power BI, IA appliquée.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Laurian Jamin — Data, automatisation & IA appliquée">
+    <meta property="og:description" content="Mon parcours et cinq projets livrés, en 1 min 34.">
+    <meta property="og:url" content="https://colauz.github.io/Portfolio/">
+    <meta property="og:image" content="https://colauz.github.io/Portfolio/assets/video/showreel-apercu.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=3.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=4.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
@@ -29,12 +36,13 @@
             </button>
 
             <ul class="nav-links">
-                <li><a href="#home" data-fr="Accueil" data-en="Home"></a></li>
+                <li><a href="#showreel" data-fr="Vidéo" data-en="Video"></a></li>
+                <li><a href="#services" data-fr="Services" data-en="Services"></a></li>
+                <li><a href="#projects" data-fr="Projets" data-en="Projects"></a></li>
                 <li><a href="#about" data-fr="À propos" data-en="About"></a></li>
                 <li><a href="#skills" data-fr="Compétences" data-en="Skills"></a></li>
                 <li><a href="#experience" data-fr="Expérience" data-en="Experience"></a></li>
                 <li><a href="#education" data-fr="Formation" data-en="Education"></a></li>
-                <li><a href="#projects" data-fr="Projets" data-en="Projects"></a></li>
                 <li><a href="#contact" data-fr="Contact" data-en="Contact"></a></li>
             </ul>
 
@@ -50,27 +58,80 @@
 
         <section id="home">
             <img src="assets/img/laurian__photo_profil.jpg" alt="Photo de profil de Laurian Jamin" class="profile-img">
-            <h1 data-fr="Développeur Logiciel & Étudiant Ingénieur" data-en="Software Developer & Engineering Student">
-            </h1>
+            <p class="badge-dispo"><span class="point-vert"></span><span data-fr="Disponible en freelance" data-en="Available for freelance work"></span></p>
+            <h1 data-fr="Data, automatisation & IA appliquée" data-en="Data, Automation & Applied AI"></h1>
             <p class="text-center"
-                data-fr="Étudiant ingénieur en informatique à l'ISIMA, spécialisé en développement full-stack, data science et cybersécurité. Passionné par la création d'outils innovants."
-                data-en="Computer Science Engineering student at ISIMA, specializing in full-stack development, data science, and cybersecurity. Passionate about creating innovative tools.">
+                data-fr="Je transforme vos fichiers Excel, vos factures et vos documents en outils qui tournent seuls. Élève ingénieur à l'ISIMA, trois ans d'outils data chez Enedis."
+                data-en="I turn your Excel files, invoices and documents into tools that run on their own. Engineering student at ISIMA, three years building data tools at Enedis.">
             </p>
+            <div class="hero-boutons">
+                <a href="#showreel" class="btn">
+                    <i class="fas fa-play"></i>
+                    <span data-fr="Voir la vidéo (1 min 34)" data-en="Watch the video (1:34)"></span>
+                </a>
+                <a href="https://www.malt.fr/profile/laurianjamin" class="btn-pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-handshake"></i>
+                    <span data-fr="Travaillons ensemble" data-en="Let's work together"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="showreel">
+            <h2 data-fr="Mon travail en 1 min 34" data-en="My work in 1:34"></h2>
+            <div class="video-cadre">
+                <video id="video-showreel" controls preload="metadata" playsinline poster="assets/video/showreel-apercu.jpg">
+                    <source src="assets/video/showreel.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="chapitres">
+                <button data-t="14" data-fr="Parcours" data-en="Background"></button>
+                <button data-t="34" data-fr="Compétences" data-en="Skills"></button>
+                <button data-t="40" data-fr="Factures par IA" data-en="AI invoices"></button>
+                <button data-t="48" data-fr="Reporting" data-en="Reporting"></button>
+                <button data-t="56" data-fr="Tableau de bord" data-en="Dashboard"></button>
+                <button data-t="64" data-fr="Assistant IA" data-en="AI assistant"></button>
+                <button data-t="72" data-fr="Bruit urbain" data-en="Urban noise"></button>
+                <button data-t="80" data-fr="En équipe" data-en="Team projects"></button>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2 data-fr="Ce que je fais pour vous" data-en="What I can do for you"></h2>
+            <div class="services-grille">
+                <div class="service">
+                    <i class="fas fa-gears"></i>
+                    <h3 data-fr="Automatiser vos reportings" data-en="Automate your reporting"></h3>
+                    <p data-fr="Vos exports Excel, même désordonnés, consolidés et contrôlés, puis envoyés en PDF à l'heure dite. Plus de copier-coller le lundi matin."
+                        data-en="Your Excel exports, however messy, consolidated, checked and sent as a PDF on schedule. No more Monday-morning copy-paste."></p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 data-fr="Des tableaux de bord qui répondent" data-en="Dashboards that answer questions"></h3>
+                    <p data-fr="Un modèle Power BI propre, des indicateurs qui se comparent à l'an dernier et à l'objectif, et chaque chiffre recontrôlé."
+                        data-en="A clean Power BI model, indicators you can compare to last year and to target, and every figure double-checked."></p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-robot"></i>
+                    <h3 data-fr="L'IA appliquée à vos documents" data-en="AI applied to your documents"></h3>
+                    <p data-fr="Extraction de factures, assistant sur vos procédures internes : des outils qui citent leurs sources, et dont la qualité est mesurée."
+                        data-en="Invoice extraction, an assistant for your internal procedures: tools that cite their sources, with measured quality."></p>
+                </div>
+            </div>
             <div class="text-center">
-                <a href="#projects" class="btn">
-                    <i class="fas fa-rocket"></i>
-                    <span data-fr="Voir mes projets" data-en="View my projects"></span>
+                <a href="https://www.malt.fr/profile/laurianjamin" class="btn" target="_blank" rel="noopener">
+                    <i class="fas fa-comments"></i>
+                    <span data-fr="Parlons de votre projet sur Malt" data-en="Let's discuss your project on Malt"></span>
                 </a>
             </div>
         </section>
 
         <section id="about">
             <h2 data-fr="À propos de moi" data-en="About me"></h2>
-            <p data-fr="Je suis un étudiant ingénieur en informatique en deuxième année à l'ISIMA (Clermont-Ferrand), actuellement en alternance chez Enedis en tant que développeur logiciel. Mon parcours académique et professionnel m'a permis de développer une expertise en développement full-stack, data science, et cybersécurité."
-                data-en="I am a second-year Computer Science Engineering student at ISIMA (Clermont-Ferrand), currently working as a software developer at Enedis. My academic and professional journey has allowed me to develop expertise in full-stack development, data science, and cybersecurity.">
+            <p data-fr="Je suis élève ingénieur en informatique en troisième année à l'ISIMA (Clermont-Ferrand), en alternance chez Enedis depuis 2023, où je développe des outils web et data. À l'été 2026, j'ai mené une mobilité de recherche au Center for Environmental Intelligence de VinUniversity, à Hanoï, sur la pollution sonore urbaine."
+                data-en="I am a third-year Computer Science Engineering student at ISIMA (Clermont-Ferrand), working at Enedis since 2023, where I build web and data tools. In summer 2026, I did a research stay at VinUniversity's Center for Environmental Intelligence in Hanoi, working on urban noise pollution.">
             </p>
-            <p data-fr="Mon approche combine rigueur technique et créativité pour concevoir des solutions logicielles robustes et innovantes."
-                data-en="My approach combines technical rigor and creativity to design robust and innovative software solutions.">
+            <p data-fr="En freelance, j'aide les PME à gagner du temps sur leurs données : des outils simples, testés, dont chaque chiffre se vérifie."
+                data-en="As a freelancer, I help small businesses save time on their data: simple, tested tools where every figure can be checked.">
             </p>
 
             <div class="skills-tags">
@@ -151,6 +212,22 @@
 
         <section id="experience">
             <h2 data-fr="Mon expérience professionnelle" data-en="My professional experience"></h2>
+
+            <div class="timeline-item">
+                <div class="timeline-company">VinUniversity, Hanoï, Viêt Nam</div>
+                <h3 data-fr="Stagiaire en recherche — Center for Environmental Intelligence"
+                    data-en="Research Intern — Center for Environmental Intelligence"></h3>
+                <p class="timeline-date" data-fr="Juin 2026 – Août 2026" data-en="June 2026 – August 2026"></p>
+                <p data-fr="Étude de l'impact du trafic urbain sur la pollution sonore, en combinant le déploiement de capteurs IoT et la simulation multi-agents (GAMA), au sein du projet de jumeau numérique COSMOS."
+                    data-en="Studied the impact of urban traffic on noise pollution by combining IoT sensor deployment and multi-agent simulation (GAMA), within the COSMOS digital twin project.">
+                </p>
+                <div class="skills-tags">
+                    <span class="skill-tag" data-fr="Python" data-en="Python"></span>
+                    <span class="skill-tag" data-fr="Analyse des données" data-en="Data Analysis"></span>
+                    <span class="skill-tag" data-fr="IoT" data-en="IoT"></span>
+                    <span class="skill-tag" data-fr="Simulation multi-agents" data-en="Multi-agent simulation"></span>
+                </div>
+            </div>
 
             <div class="timeline-item">
                 <div class="timeline-company">Enedis, Chambéry, France</div>
@@ -293,21 +370,117 @@
             <h2 data-fr="Mes projets" data-en="My projects"></h2>
 
             <div class="projects-category">
+                <h3 data-fr="Projets data & IA" data-en="Data & AI projects"></h3>
+                <p class="categorie-intro" data-fr="Cinq outils qui répondent à des besoins réels de PME. Chacun se régénère d'une commande, porte ses propres tests, et son code est public."
+                    data-en="Five tools answering real small-business needs. Each one rebuilds from a single command, ships with its own tests, and its code is public."></p>
+
+                <div class="project-card projet-data">
+                    <div class="projet-media">
+                        <video class="boucle" muted loop playsinline preload="none" poster="assets/img/projets/03.jpg">
+                            <source src="assets/video/projet-03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h4 data-fr="Extraction de factures par IA" data-en="AI invoice extraction"></h4>
+                    <p data-fr="Des factures PDF de toutes formes deviennent un tableau Excel contrôlé. Chaque facture reçoit un verdict : à intégrer, à vérifier ou à corriger." data-en="PDF invoices of any layout become a checked Excel table. Each invoice gets a verdict: accept, review or fix."></p>
+                    <div class="projet-chiffre"><b>80/80</b><span data-fr="champs exacts, mesurés" data-en="exact fields, measured"></span></div>
+                    <div class="project-tags"><span class="project-tag" data-fr="Python" data-en="Python"></span><span class="project-tag" data-fr="Claude API" data-en="Claude API"></span><span class="project-tag" data-fr="Streamlit" data-en="Streamlit"></span><span class="project-tag" data-fr="pdfplumber" data-en="pdfplumber"></span></div>
+                    <div class="project-link">
+                        <a href="https://github.com/Colauz/extraction-factures-ia" class="btn-project" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span data-fr="Voir le code" data-en="View the code"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card projet-data">
+                    <div class="projet-media">
+                        <video class="boucle" muted loop playsinline preload="none" poster="assets/img/projets/02.jpg">
+                            <source src="assets/video/projet-02.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h4 data-fr="Reporting hebdomadaire automatisé" data-en="Automated weekly reporting"></h4>
+                    <p data-fr="Vingt exports Excel disparates consolidés en un rapport PDF envoyé chaque lundi à 6 h 30, avec la trace de chaque ligne écartée." data-en="Twenty inconsistent Excel exports consolidated into a PDF report sent every Monday at 6:30, with every discarded row accounted for."></p>
+                    <div class="projet-chiffre"><b>973</b><span data-fr="lignes retenues sur 1 013, les autres justifiées" data-en="rows kept out of 1,013, the rest explained"></span></div>
+                    <div class="project-tags"><span class="project-tag" data-fr="Python" data-en="Python"></span><span class="project-tag" data-fr="pandas" data-en="pandas"></span><span class="project-tag" data-fr="reportlab" data-en="reportlab"></span><span class="project-tag" data-fr="cron" data-en="cron"></span></div>
+                    <div class="project-link">
+                        <a href="https://github.com/Colauz/reporting-automatise-excel-pdf" class="btn-project" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span data-fr="Voir le code" data-en="View the code"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card projet-data">
+                    <div class="projet-media">
+                        <video class="boucle" muted loop playsinline preload="none" poster="assets/img/projets/01.jpg">
+                            <source src="assets/video/projet-01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h4 data-fr="Tableau de bord commercial" data-en="Sales dashboard"></h4>
+                    <p data-fr="Un modèle Power BI en étoile et 38 mesures DAX qui montrent ce qui fait le chiffre d'affaires, et ce qui fait vraiment la marge." data-en="A star-schema Power BI model and 38 DAX measures showing what drives revenue, and what actually drives margin."></p>
+                    <div class="projet-chiffre"><b>27 %</b><span data-fr="des clients font 80 % du CA" data-en="of clients make 80% of revenue"></span></div>
+                    <div class="project-tags"><span class="project-tag" data-fr="Power BI" data-en="Power BI"></span><span class="project-tag" data-fr="DAX" data-en="DAX"></span><span class="project-tag" data-fr="Python" data-en="Python"></span><span class="project-tag" data-fr="pandas" data-en="pandas"></span></div>
+                    <div class="project-link">
+                        <a href="https://github.com/Colauz/dashboard-commercial-powerbi" class="btn-project" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span data-fr="Voir le code" data-en="View the code"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card projet-data">
+                    <div class="projet-media">
+                        <video class="boucle" muted loop playsinline preload="none" poster="assets/img/projets/04.jpg">
+                            <source src="assets/video/projet-04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h4 data-fr="Assistant documentaire interne" data-en="Internal document assistant"></h4>
+                    <p data-fr="Des réponses tirées des procédures de l'entreprise, avec la source citée à chaque fois, et qui sait dire « je ne sais pas »." data-en="Answers drawn from company procedures, always citing their source, and able to say “I don't know”."></p>
+                    <div class="projet-chiffre"><b>0</b><span data-fr="réponse inventée sur 17" data-en="made-up answers out of 17"></span></div>
+                    <div class="project-tags"><span class="project-tag" data-fr="RAG" data-en="RAG"></span><span class="project-tag" data-fr="Python" data-en="Python"></span><span class="project-tag" data-fr="Claude API" data-en="Claude API"></span><span class="project-tag" data-fr="Streamlit" data-en="Streamlit"></span></div>
+                    <div class="project-link">
+                        <a href="https://github.com/Colauz/assistant-documentaire-rag" class="btn-project" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span data-fr="Voir le code" data-en="View the code"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card projet-data">
+                    <div class="projet-media">
+                        <video class="boucle" muted loop playsinline preload="none" poster="assets/img/projets/05.jpg">
+                            <source src="assets/video/projet-05.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h4 data-fr="Cartographie du bruit urbain" data-en="Urban noise mapping"></h4>
+                    <p data-fr="Des mesures horaires brutes aux indicateurs réglementaires (Lden, points noirs) et à une carte interactive du bruit." data-en="From raw hourly measurements to regulatory indicators (Lden, noise hotspots) and an interactive noise map."></p>
+                    <div class="projet-chiffre"><b>6 720</b><span data-fr="mesures horaires traitées" data-en="hourly measurements processed"></span></div>
+                    <div class="project-tags"><span class="project-tag" data-fr="Python" data-en="Python"></span><span class="project-tag" data-fr="numpy" data-en="numpy"></span><span class="project-tag" data-fr="folium" data-en="folium"></span><span class="project-tag" data-fr="Acoustique" data-en="Acoustique"></span></div>
+                    <div class="project-link">
+                        <a href="https://github.com/Colauz/cartographie-bruit-urbain" class="btn-project" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span data-fr="Voir le code" data-en="View the code"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-category">
                 <h3 data-fr="Projets scolaires" data-en="Academic Projects"></h3>
 
                 <div class="project-card">
                     <h4 data-fr="Application Shazam-like" data-en="Shazam-like Application"></h4>
                     <p class="project-date" data-fr="2024–2025" data-en="2024–2025"></p>
                     <p class="project-location">ISIMA, Clermont-Ferrand, France</p>
-                    <p data-fr="Développement d'une application de reconnaissance musicale similaire à Shazam, utilisant Electron.js pour le frontend et une API en C++ pour le traitement audio."
-                        data-en="Developed a music recognition application similar to Shazam using Electron.js for the frontend and a C++ API for audio processing.">
+                    <p data-fr="Application de reconnaissance musicale façon Shazam : empreintes audio par transformée de Fourier, interface Angular packagée avec Electron.js, serveur de calcul en C# (ASP.NET Core) et base PostgreSQL."
+                        data-en="A Shazam-style music recognition app: audio fingerprints via Fourier transform, an Angular interface packaged with Electron.js, a C# (ASP.NET Core) processing server and a PostgreSQL database.">
                     </p>
                     <div class="project-tags">
                         <span class="project-tag" data-fr="Electron.js" data-en="Electron.js"></span>
-                        <span class="project-tag" data-fr="C++" data-en="C++"></span>
-                        <span class="project-tag" data-fr="HTML/CSS" data-en="HTML/CSS"></span>
-                        <span class="project-tag" data-fr="JS" data-en="JS"></span>
-                        <span class="skill-tag" data-fr="Mysql" data-en="Mysql"></span>
+                        <span class="project-tag" data-fr="Angular" data-en="Angular"></span>
+                        <span class="project-tag" data-fr="C#" data-en="C#"></span>
+                        <span class="project-tag" data-fr="PostgreSQL" data-en="PostgreSQL"></span>
+                        <span class="project-tag" data-fr="Docker" data-en="Docker"></span>
                         <span class="project-tag" data-fr="Git + CI/CD" data-en="Git + CI/CD"></span>
                         <span class="project-tag" data-fr="Traitement audio" data-en="Audio Processing"></span>
                         <span class="project-tag" data-fr="Formules Mathématiques"
@@ -339,11 +512,11 @@
                 </div>
 
                 <div class="project-card">
-                    <h4 data-fr="Site Web IMDb-like" data-en="IMDb-like Website"></h4>
+                    <h4 data-fr="HolaCiné : plateforme de films" data-en="HolaCiné: movie platform"></h4>
                     <p class="project-date" data-fr="2023–2024" data-en="2023–2024"></p>
                     <p class="project-location">IUT Aurillac, Aurillac, France</p>
-                    <p data-fr="Conception et implémentation d'un site web de base de données de films, utilisant Python, Deno.js, HTML/CSS pour le backend et le frontend."
-                        data-en="Designed and implemented a movie database website using Python, Deno.js, and HTML/CSS for the backend and frontend.">
+                    <p data-fr="Plateforme de films avec comptes utilisateurs, notes et recommandation hybride (filtrage collaboratif + contenu). Serveur Node.js, base MySQL, moteur de recommandation en Python."
+                        data-en="A movie platform with user accounts, ratings and hybrid recommendations (collaborative + content-based filtering). Node.js server, MySQL database, Python recommendation engine.">
                     </p>
                     <div class="project-tags">
                         <span class="project-tag" data-fr="Python" data-en="Python"></span>
@@ -352,14 +525,18 @@
                         <span class="project-tag" data-fr="JS" data-en="JS"></span>
                         <span class="project-tag" data-fr="TS" data-en="TS"></span>
                         <span class="project-tag" data-fr="Git + CI/CD" data-en="Git + CI/CD"></span>
-                        <span class="skill-tag" data-fr="Mysql" data-en="Mysql"></span>
-                        <span class="project-tag" data-fr="Formules Mathématiques"
-                            data-en="Mathematical Formulas"></span>
+                        <span class="project-tag" data-fr="MySQL" data-en="MySQL"></span>
+                        <span class="project-tag" data-fr="Node.js" data-en="Node.js"></span>
+                        <span class="project-tag" data-fr="Recommandation" data-en="Recommender system"></span>
                     </div>
                     <div class="project-link">
                         <a href="holacine_project.html" class="btn-project">
                             <i class="fas fa-eye"></i>
                             <span data-fr="Voir le projet" data-en="View Project"></span>
+                        </a>
+                        <a href="https://github.com/Colauz/holacine" class="btn-pdf" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span data-fr="Code source" data-en="Source code"></span>
                         </a>
                     </div>
                     <div class="project-pdf-downloads">
@@ -430,7 +607,7 @@
                         </a>
                     </div>
                     <div class="project-pdf-download">
-                        <a href="assets/pdf/Projet_Nutrition_Quality_Analysis.pdf" class="btn-pdf" target="_blank">
+                        <a href="assets/pdf/Rapport_Nutrition_PowerBI.pdf" class="btn-pdf" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                             <span data-fr="Télécharger le rapport" data-en="Download Report"></span>
                         </a>
@@ -528,6 +705,8 @@
 
         <section id="contact">
             <h2 data-fr="Contactez-moi" data-en="Contact me">Contactez-moi</h2>
+            <p class="text-center" data-fr="Un projet, une question ? Le plus simple est de m'écrire sur Malt, ou via le formulaire ci-dessous."
+                data-en="A project, a question? The easiest way is to message me on Malt, or use the form below."></p>
 
             <form class="contact-form" action="https://formspree.io/f/mvgdpydd" method="POST">
 
@@ -552,6 +731,10 @@
             </form>
 
             <div class="contact-info">
+                <a href="https://www.malt.fr/profile/laurianjamin" target="_blank" rel="noopener" title="Voir mon profil Malt">
+                    <i class="fas fa-handshake"></i>
+                    <span>Malt</span>
+                </a>
                 <a href="mailto:jaminfollietlaurian@gmail.com" title="Envoyer un email">
                     <i class="fas fa-envelope"></i>
                     <span>jaminfollietlaurian@gmail.com</span>
@@ -574,11 +757,11 @@
     </div>
 
     <footer>
-        <p data-fr="© 2025 Laurian Jamin. Tous droits réservés." data-en="© 2025 Laurian Jamin. All rights reserved.">
+        <p data-fr="© 2026 Laurian Jamin. Tous droits réservés." data-en="© 2026 Laurian Jamin. All rights reserved.">
         </p>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=4.0"></script>
 
 </body>
 

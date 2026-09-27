@@ -1,23 +1,26 @@
-# 🚀 Laurian Jamin Portfolio | Software Developer & Engineering Student
+# 🚀 Laurian Jamin Portfolio | Data, Automation & Applied AI
 
 This repository contains the source code for my professional online portfolio. It showcases my academic and professional journey as a **Software Developer and Engineering Student at ISIMA** (Clermont-Ferrand), specializing in **Full-Stack Development**, **Data Science**, and **Cybersecurity**.
 
 The website is designed to be fully **bilingual (French/English)** and presents my skills, my work-study experience at **Enedis**, and my key academic projects in detail.
 
-## ✨ Project Features Overview
+## ✨ Projec## ✨ Project Features Overview
 
-* **Fully Bilingual:** Dynamic language switching (FR/EN) for all content (titles, descriptions, buttons).
-* **Responsive Design:** A modern and adaptive user interface, optimized for all devices.
-* **Detailed Timeline:** Chronological presentation of my **Professional Experience (Enedis)** and my **Education (Data Science Bachelor's, ISIMA)**.
-* **Detailed Projects:** Dedicated pages for three major academic projects:
-    * **Larrythmique:** Shazam-like music recognition application (Electron.js, C#, Signal Processing).
-    * **HolaCiné:** Movie platform with a hybrid recommendation system (TypeScript, Deno, MySQL).
-    * **Akinator:** Mathematical guessing game based on Shannon entropy (Python).
-* **Contact:** Functional contact form (via Formspree) and direct links to my professional networks (LinkedIn, GitHub).
+* **Showreel:** a 1:34 motion-design video presenting my background, skills and projects, with clickable chapters.
+* **Freelance offer:** what I do for small businesses (automated reporting, Power BI dashboards, AI applied to documents), with a direct link to my [Malt profile](https://www.malt.fr/profile/laurianjamin).
+* **Data & AI projects:** five tools built for real SME needs, each with a live preview loop and its public GitHub repository:
+    * [Invoice extraction with AI](https://github.com/Colauz/extraction-factures-ia) (Claude API, Streamlit)
+    * [Automated weekly reporting](https://github.com/Colauz/reporting-automatise-excel-pdf) (pandas, reportlab)
+    * [Sales dashboard](https://github.com/Colauz/dashboard-commercial-powerbi) (Power BI, DAX)
+    * [Internal document assistant, RAG](https://github.com/Colauz/assistant-documentaire-rag) (Claude API)
+    * [Urban noise mapping](https://github.com/Colauz/cartographie-bruit-urbain) (numpy, folium)
+* **Academic projects:** Larrythmique (Shazam-like, C# / Angular / Electron), [HolaCiné](https://github.com/Colauz/holacine) (hybrid movie recommendation), Akinator (Shannon entropy), nutrition analysis.
+* **Timeline:** Enedis (apprenticeship since 2023), VinUniversity research stay (Hanoi, 2026), ISIMA and BUT Data Science.
+* **Fully bilingual** (FR/EN) and **responsive**.
 
 ---
 
-## 🛠️ Technologies Used
+ologies Used
 
 The portfolio is built on standard web technologies, highlighting the languages I master.
 
@@ -59,4 +62,4 @@ For any questions, opportunities, or collaborations, feel free to reach out.
 
 ---
 
-© 2025 Laurian Jamin. All rights reserved.
+© 2026 Laurian Jamin. All rights reserved.
