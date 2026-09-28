@@ -1846,3 +1846,68 @@ textarea:focus-visible {
 .chapitres .lien-youtube:hover {
     color: #ff4e45;
 }
+
+/* Résultats mesurés et méthode de travail (repris du profil Malt) */
+.sous-titre-services {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 var(--space-lg);
+}
+
+.resultats-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.resultat {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg) var(--space-md);
+    text-align: center;
+}
+
+.resultat strong {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: var(--space-sm);
+}
+
+.resultat span {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.methode {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto var(--space-xl);
+    max-width: 640px;
+    display: grid;
+    gap: var(--space-md);
+}
+
+.methode li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.methode i {
+    flex: none;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
